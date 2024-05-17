@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ActTrack</title>
+    <link rel="stylesheet" href="style-login.css">
+</head>
+<body>
+    <center>
+    <img src="logo-web.png" alt="img" width="350" height="350" id="logo-web">
+    </center>
+    <div class="container">
+        <h1 align="center" id="header">Login</h1>
+        <form action="dashboard.html" id="login-form">
+            <input type="text" name="username" id="username" placeholder="username" required>
+            <input type="password" name="password" id="password" placeholder="password" required>
+            <div class="checkbox-container">
+                <input type="checkbox" name="remember-me" id="remember-me">
+                <span id="remember-me-checkbox">remember me!</span>
+            </div>
+            <br>
+            <button type="submit" id="submit">
+                Login
+            </button>
+            <button onclick="location.href='register.html'">Register</button>
+        </form>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

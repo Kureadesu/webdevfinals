@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ActTrack</title>
+    <link rel="stylesheet" href="style-register.css">
+</head>
+<body>
+    <header>
+        <img src="logo-web.png" alt="img" width="350" height="350" id="logo-web">
+    </header>
+    <main>
+        <div class="container">
+            <h1>Register</h1>
+            <form id="register-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <p id="username-error" class="error"></p>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <p id="email-error" class="error"></p>
+
+                <label for="password">Password:</label>
+                <p id="password-error" class="error"></p>
+                <input type="password" id="password" required>
+                <div id="passwordStrengthMeter"></div>
+
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+                <p id="confirm-password-error" class="error"></p>
+                <button type="submit">Register</button>
+            </form>
+            <p id="success-message" class="success"></p>
+            <p>already registered?</p>
+            <a href="login.html" id="link-login">Login</a>
+        </div>
+    </main>
+    <script src="password-meter.js"></script>
+    <script src="index-reg.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#header {
+    padding: 15px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.logo-img {
+    margin-left: 20px;
+}
+
+.nav-container {
+    background-color: #4CAF50;
+    padding: 10px;
+    color: #fff;
+}
+
+.nav-container ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-container li {
+    margin-right: 20px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.nav-container a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    width: 400px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    margin-top: 0;
+}
+
+.title-container
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.class-list-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    z-index: 1000;
+    background-color: #fff;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+  
+#class-list-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+  
+#class-list-table th,
+#class-list-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+  
+#class-list-table th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+.close-btn {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    padding: 5px 10px;
+    background-color: #ff4343;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 9999; /* Add this line to set a higher z-index value */
+  }
