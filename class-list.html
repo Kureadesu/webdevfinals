@@ -4,8 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard | ActTrack</title>
+    <link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
-    
+    <header class="header-container">
+        <h1 id="header">Class List</h1>
+        <img src="logo-web.png" alt="logo" width="100" height="100" class="logo-img">
+    </header>
+    <nav class="nav-container">
+        <ul>
+            <li><a href="#">Attendance</a></li>
+            <li><a href="#">Grades</a></li>
+            <li><a href="#">Profile</a></li>
+        </ul>
+    </nav>
+    <main class="main-container">
+        <section class="card">
+            <div class="title-container">
+                <h2>Web Design Development</h2>
+                <button class="class-list-btn" onclick="toggleClassList(1)">view class list</button>
+            </div>
+            <table id="class-list-table-1" class="class-list-table hidden">
+                <thead>
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Name</th>
+                        <th>Course/Section</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Add student data here -->
+                    <tr>
+                        <td>12223MN-000540</td>
+                        <td>Balaba, Claire Angeli J.</td>
+                        <td>BSAIS 2-1</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="card">
+            <div class="title-container">
+                <h2>Subject 2</h2>
+                <button class="class-list-btn" onclick="toggleClassList(2)">view class list</button>
+            </div>
+            <table id="class-list-table-2" class="class-list-table hidden">
+                <thead>
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Name</th>
+                        <th>Course</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Add student data here -->
+                </tbody>
+            </table>
+        </section>
+        <section class="card">
+            <div class="title-container">
+                <h2>Subject 3</h2>
+                <button class="class-list-btn" onclick="toggleClassList(3)">view class list</button>
+            </div>
+            <table id="class-list-table-3" class="class-list-table hidden">
+                <thead>
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Name</th>
+                        <th>Course</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Add student data here -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="classlist.js"></script>
+    <div class="overlay"></div>
 </body>
 </html>

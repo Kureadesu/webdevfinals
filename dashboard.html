@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard | ActTrack</title>
-    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="dashboard-student.css">
 </head>
 <body>
     <div class="overlay"></div>
@@ -24,24 +24,9 @@
         <div class="card">
             <div class="title-container">
                 <h2>Registered Students</h2>
-                <h3>1</h3>
+                <h3 id="get-registered-students"></h3>
             </div>
-            <p><a href="#" id="class-list">view class list</a></p>
-            <div id="class-list-container" class="class-list-container">
-                <button class="close-btn">Close</button>
-                <table id="class-list-table">
-                  <thead>
-                    <tr>
-                      <th>Student ID</th>
-                      <th>Name</th>
-                      <th>Course</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <!-- Add student data here -->
-                  </tbody>
-                </table>
-              </div>
+            <p><a href="class-list.html" id="class-list">view class list</a></p>
         </div>
         <div class="card">
             <h2>Card 2</h2>
@@ -52,6 +37,5 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
     </div>
-    <script src="classlist.js"></script>
 </body>
 </html>
