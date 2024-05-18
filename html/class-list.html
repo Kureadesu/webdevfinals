@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard | ActTrack</title>
-    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="class-list.css">
 </head>
 <body>
     <header class="header-container">
@@ -24,7 +24,7 @@
                 <h2>Web Design Development</h2>
                 <button class="class-list-btn" onclick="toggleClassList(1)">view class list</button>
             </div>
-            <table id="class-list-table-1" class="class-list-table hidden">
+            <table id="class-list-table-1" class="class-list-table hidden visible">
                 <thead>
                     <tr>
                         <th>Student ID</th>
@@ -44,7 +44,7 @@
         </section>
         <section class="card">
             <div class="title-container">
-                <h2>Subject 2</h2>
+                <h2>System Analysis and Design</h2>
                 <button class="class-list-btn" onclick="toggleClassList(2)">view class list</button>
             </div>
             <table id="class-list-table-2" class="class-list-table hidden">
@@ -57,12 +57,37 @@
                 </thead>
                 <tbody>
                     <!-- Add student data here -->
+                    <tr>
+                        <td>12223MN-000540</td>
+                        <td>Balaba, Claire Angeli J.</td>
+                        <td>BSAIS 2-1</td>
+                    </tr>
+                    <tr>
+                        <td>12223MN-000540</td>
+                        <td>Balaba, Claire Angeli J.</td>
+                        <td>BSAIS 2-1</td>
+                    </tr>
+                    <tr>
+                        <td>12223MN-000540</td>
+                        <td>Balaba, Claire Angeli J.</td>
+                        <td>BSAIS 2-1</td>
+                    </tr>
+                    <tr>
+                        <td>12223MN-000540</td>
+                        <td>Balaba, Claire Angeli J.</td>
+                        <td>BSAIS 2-1</td>
+                    </tr>
+                    <tr>
+                        <td>12223MN-000540</td>
+                        <td>Balaba, Claire Angeli J.</td>
+                        <td>BSAIS 2-1</td>
+                    </tr>
                 </tbody>
             </table>
         </section>
         <section class="card">
             <div class="title-container">
-                <h2>Subject 3</h2>
+                <h2>Advance Airline Ticketing</h2>
                 <button class="class-list-btn" onclick="toggleClassList(3)">view class list</button>
             </div>
             <table id="class-list-table-3" class="class-list-table hidden">
@@ -75,11 +100,18 @@
                 </thead>
                 <tbody>
                     <!-- Add student data here -->
+                    <tr>
+                        <td>12223MN-000540</td>
+                        <td>Balaba, Claire Angeli J.</td>
+                        <td>BSAIS 2-1</td>
+                    </tr>
                 </tbody>
             </table>
         </section>
+        <button class="class-list-btn" onclick="location.href='dashboard.html'">
+            Back to Dashboard
+        </button>
     </main>
     <script src="classlist.js"></script>
-    <div class="overlay"></div>
 </body>
 </html>

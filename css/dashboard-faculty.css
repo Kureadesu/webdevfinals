@@ -18,6 +18,17 @@ body
 
 #header {
     padding: 15px;
+    color: #ffffff;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.subtitle
+{
+    font-size: 16px;
 }
 
 .header-container {
