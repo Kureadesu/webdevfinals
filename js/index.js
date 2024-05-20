@@ -3,13 +3,30 @@ const form = document.getElementById("login-form");
 const usernameInput = document.getElementById("username");
 const passwordInput = document.getElementById("password");
 const rememberMeCheckbox = document.getElementById("remember-me");
-const submitButton = document.getElementById("submit");
 
-// Check if the user has previously checked "Remember me"
-if (localStorage.getItem("rememberMe") === "true") {
-  rememberMeCheckbox.checked = true;
-  usernameInput.value = localStorage.getItem("username") || "";
-  passwordInput.value = localStorage.getItem("password") || "";
+form.addEventListener("submit", login);
+
+function login(event){
+  event.preventDefault();
+
+// accounts
+const admin = {
+  "username" : "admin",
+  "password" : "admin123",
+  "email" : "null",
+  "redirectUrl": "../html/admin-dashboard.html"
+};
+const faculty = {
+  "username" : "faculty",
+  "password" : "test1",
+  "email" : "testfaculty@gmail.com",
+  "redirectUrl": "../html/dashboard.html"
+}
+const student = {
+  "username" : "kurea",
+  "password" : "kUreadesu3",
+  "email" : "kurea3@gmail.com",
+  "redirectUrl": "../html/dashboard-student.html"
 }
 
 // Attach an event listener to the form's submit event
@@ -18,8 +35,8 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
 
   // Get the form fields
-  const username = usernameInput.value.trim();
-  const password = passwordInput.value.trim();
+  const username = usernameInput.value;
+  const password = passwordInput.value;
 
   // Check if the form fields are valid
   if (!event.target.checkValidity()) {
@@ -30,45 +47,42 @@ form.addEventListener("submit", (event) => {
   if (username === "" && password === "") {
     alert("Fields are empty");
     return;
-  } else if (username === "admin" && password === "") {
+  } else if (!username === "" && password === "") {
     alert("Please fill in password");
     return;
-  } else if (username === "" && password === "admin123") {
+  } else if (username === "" && !password === "") {
     alert("Please fill in username");
     return;
-  } else if (username === "admin" && password === "admin123") {
-    // Store the username and password in local storage if "Remember me" is checked
-    if (rememberMeCheckbox.checked) {
-      storeCredentials(username, password);
+  } else {
+    // Check if the username and password match any of the accounts
+    const accounts = [admin, faculty, student];
+    const matchedAccount = accounts.find((account) => {
+      return account.username === username && account.password === password;
+    });
+    
+    localStorage.removeItem(username, password);
+    if (matchedAccount) {
+      // Redirect the user to the appropriate page based on their account type
+      window.location.assign(matchedAccount.redirectUrl);
     } else {
-      clearCredentials();
+      window.alert("Invalid username or password");
     }
-
-    // Add your login logic here
-    // For example, you can make an AJAX request to a server-side script
-    var xhttp = new XMLHttpRequest();
-    xhttp.open('POST', 'profile-data.json', true);
-
-    xhttp.onload = function() {
-      var data = JSON.parse(xhttp.responseText);
-      console.log(data[0]);
-    };
-
-    // or use a library like Firebase to handle authentication
-    console.log("Login successful!");
   }
 });
 
+//AJAX request
+var http = new XMLHttpRequest();
+http.open("POST", "server.js", true);
+
+/*
 // Function to store the username and password in local storage
 function storeCredentials(username, password) {
-  localStorage.setItem("rememberMe", "true");
-  localStorage.setItem("username", username);
-  localStorage.setItem("password", password);
+  
 }
 
 // Function to clear the username and password from local storage
 function clearCredentials() {
-  localStorage.setItem("rememberMe", "false");
-  localStorage.removeItem("username");
-  localStorage.removeItem("password");
+  
+}
+*/
 }

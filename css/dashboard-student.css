@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu';
+}
+
+header {
+    color: white;
+    height: 100px;
+    line-height: 100px;
+    border-bottom: 1px solid #CCD1D1;
+    position: sticky;
+}
+
+header h1{
+    padding-left: 25px;
+    float:left;
+    padding-right: 60px;
+    color: #7C9F6F;
+}
+
+.topnav{
+    padding-left: 50px;
+}
+
+.topnav a{
+    padding: 0px 10px;
+    text-decoration: none;
+    color: grey;
+    font-size: 15px;
+}
+
+.active {
+    font-weight: 500;
+    border-bottom: 2px solid;
+    
+}
+
+aside{
+    padding-top: 25px;
+    padding-left: 75px;
+    width: 250px;
+    border-right: 1px solid #D6DBDF;
+    height: 100vh;
+    float: left;
+    display: block;
+}
+
+aside h1{
+    padding-bottom: 20px;
+}
+
+aside a{
+    text-decoration: none;
+}
+
+.sidenav{
+    display: flex;
+    flex-direction: column;
+}
+
+.sidenav a{
+    text-decoration: none;
+    padding: 10px;
+}
+
+.sidenav :not(.active2){
+    color: grey;
+}
+
+.active2{
+    color: #7C9F6F;
+    font-weight: 400;
+    background-color: #EBEDEF;
+    width: fit-content;
+    border-radius: 10px;
+}
+
+.logout{
+    padding-top: 20px;
+    padding-left: 10px;
+    color: red;
+}
+
+main{
+    display:block;
+    float: left;
+}
+
+img{
+    border-radius: 50%;
+    border: 6px solid #7C9F6F;
+    padding: 2px;
+}
+
+.pfp{
+    display: flex;
+}
+
+.name{
+    font-size: 23px;
+    font-weight: 500;
+    padding-bottom: 10px;
+}
+
+.studno{
+    font-style: italic;
+}
+
+.pfp p:not(.name){
+    color: grey;
+    padding-bottom: 5px;
+}
+
+.info{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    padding-left: 50px;
+}
+
+.border {
+    border: 1px solid #D6DBDF;
+    border-radius: 10px;
+    margin: 50px;
+    padding: 40px 70px;
+    width: 1070px;
+}
+
+.mainheading{
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 25px;
+}
+
+.heading{
+    font-size: 12px;
+    color: grey;
+}
+
+.text{
+    font-size: 15px;
+}
+
+.container{
+    display:flex;
+    justify-content: space-between;
+}
+
+.top{
+    padding-bottom: 25px;
+}
+
+.heading{
+    padding-bottom: 10px;
+}
+
+button{
+    float: right;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid #7C9F6F;
+    background-color: #7C9F6F;
+    color: white;
+}
+
+#head-sidenav{
+    text-decoration: none;
+    color: #000;
+}
