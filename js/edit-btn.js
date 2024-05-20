@@ -4,9 +4,9 @@ const end_button = document.querySelector(".end-editing");
 const first_name = document.getElementById("fname");
 const last_name = document.getElementById("lname");
 const middle_name = document.getElementById("Mname");
-const nameElement = first_name + middle_name + last_name;
 const idNumberElement = document.querySelector(".idno");
 const programElement = document.querySelector(".prog");
+const nameElement = document.querySelector(".name");
 
 function editText() {
     edit_button.addEventListener("click", function() {
@@ -17,20 +17,9 @@ function editText() {
         end_button.style.display = "block";
     } );
     end_button.addEventListener("click", function() {
-        editableParagraphs.forEach((paragraph, index) => {
+        editableParagraphs.forEach((paragraph) => {
             paragraph.contentEditable = false;
             paragraph.style.border = "none";
-            switch (index) {
-                case 0:
-                    nameElement.textContent = paragraph.textContent;
-                    break;
-                case 1:
-                    idNumberElement.textContent = paragraph.textContent;
-                    break;
-                case 2:
-                    programElement.textContent = paragraph.textContent;
-                    break;
-            }
         });
         end_button.style.display = "none";
     } );
