@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Grades | ActTrack</title>
+    <link rel="stylesheet" href="../misc/fonts.css">
+    <link rel="stylesheet" href="../misc/all.min.css">
+    <link rel="stylesheet" href="../misc/fontawesome.min.css">
+    <link rel="stylesheet" href="../css/grades.css">
+</head>
+<body>
+    <header>
+        <a href="../html/dashboard-student.html"><!--link to homepage / dashboard-->
+        <h1>ActTrack</h1></a>
+        <nav class="topnav"> 
+            <a href="../html/attendance-student.html">Attendance</a>
+            <a href="./grades.html" class="active">Grades</a>
+            <a href="../html/profile.html">Profile</a>
+            <div class="dropdown">
+                <a href="#">Class</a>
+                <div class="dropdown-content">
+                    <div class="content">
+                        <a href="#">Modules</a>
+                    </div>
+                    <div class="content">
+                        <a href="#">Quizzes</a>
+                    </div>
+                    <div class="content">
+                        <a href="#">Assignments</a>
+                    </div>
+                    <div class="content">
+                        <a href="#">Projects</a>
+                    </div>
+                    <div class="content">
+                        <a href="#">Exam</a>
+                    </div>
+                </div>
+            </div> 
+            <a href="../html/login.html" id="logout">Logout</a>
+        </nav>
+    </header>
+    <main class="main-container">
+        <div class="card">
+            <h1>Grades</h1>
+            <table id="class-list-table-1" class="class-list-table">
+                <thead>
+                    <tr>
+                        <th>Subject ID</th>
+                        <th>Subject Description</th>
+                        <th>Instructor</th>
+                        <th>Units</th>
+                        <th>Prelim</th>
+                        <th>Midterm</th>
+                        <th>Final</th>
+                        <th>GWA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Add student data here -->
+                    <tr>
+                        <td>IS221</td>
+                        <td>Web Design Development</td>
+                        <td>Ricafort, Sheryl Ann B.</td>
+                        <td>3</td>
+                        <td>85</td>
+                        <td>90</td>
+                        <td>92</td>
+                        <td><b>89.33</b></td>
+                    </tr>
+                    <tr>
+                        <td>AIS223</td>
+                        <td>Advance Airline Ticketing</td>
+                        <td>Caguia, Cielito M.</td>
+                        <td>3</td>
+                        <td>80</td>
+                        <td>85</td>
+                        <td>90</td>
+                        <td><b>85.00</b></td>
+                    </tr>
+                    <tr>
+                        <td>IS222</td>
+                        <td>System Analysis and Design</td>
+                        <td>Dasalla, Jerum B.</td>
+                        <td>3</td>
+                        <td>86</td>
+                        <td>90</td>
+                        <td>94</td>
+                        <td><b>90.00</b></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <button class="class-list-btn" onclick="location.href = './dashboard-student.html'">
+                Back to Dashboard
+            </button>
+        </div> 
+    </main>
+    
+    <script src="../js/classlist.js"></script>
+</body>
+</html>

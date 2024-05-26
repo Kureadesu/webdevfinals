@@ -1,3 +1,11 @@
+:root {
+    --primary-color: #5aa55c;
+    --secondary-color: #4CAF50;
+    --background-color: #f5f5f5;
+    --border-color: #ddd;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,12 +13,17 @@
     font-family: 'Ubuntu';
 }
 
+body
+{
+    background: var(--primary-color);
+}
 header {
-    color: white;
+    background: var(--background-color);
     height: 100px;
     line-height: 100px;
     border-bottom: 1px solid #CCD1D1;
     position: sticky;
+    z-index: 9999;
 }
 
 header h1{
@@ -22,6 +35,7 @@ header h1{
 
 .topnav{
     padding-left: 50px;
+    font-size: 18px;
 }
 
 .topnav a{
@@ -34,53 +48,6 @@ header h1{
 .active {
     font-weight: 500;
     border-bottom: 2px solid;
-    
-}
-
-aside{
-    padding-top: 25px;
-    padding-left: 75px;
-    width: 250px;
-    border-right: 1px solid #D6DBDF;
-    height: 100vh;
-    float: left;
-    display: block;
-}
-
-aside h1{
-    padding-bottom: 20px;
-}
-
-aside a{
-    text-decoration: none;
-}
-
-.sidenav{
-    display: flex;
-    flex-direction: column;
-}
-
-.sidenav a{
-    text-decoration: none;
-    padding: 10px;
-}
-
-.sidenav :not(.active2){
-    color: grey;
-}
-
-.active2{
-    color: #7C9F6F;
-    font-weight: 400;
-    background-color: #EBEDEF;
-    width: fit-content;
-    border-radius: 10px;
-}
-
-.logout{
-    padding-top: 20px;
-    padding-left: 10px;
-    color: red;
 }
 
 main{
@@ -169,4 +136,413 @@ button{
 #head-sidenav{
     text-decoration: none;
     color: #000;
+}
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    height: fit-content;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card {
+    background-color: var(--background-color);
+    padding: 20px;
+    margin: 10px;
+    width: fit-content;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px var(--shadow-color);
+    border-radius: 5px;
+}
+
+.card h2 {
+    margin-top: 0;
+}
+
+.title-container
+{
+    display: flex;
+    justify-content: space-between;
+}
+/*calendar*/
+.wrapper {
+    max-width: fit-content;
+    margin: 15px auto;
+}
+ 
+/* Calendar container */
+.container-calendar {
+    background: #ffffff;
+    padding: 15px;
+    max-width: 900px;
+    margin: 2px auto;
+    overflow: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+ 
+/* Event section styling */
+#event-section {
+    padding: 10px;
+    background: #f5f5f5;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+}
+ 
+.container-calendar #left h1 {
+    color: var(--primary-color);
+    text-align: center;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 10px 0;
+}
+ 
+#event-section h3 {
+    color: var(--primary-color);
+    font-size: 18px;
+    margin: 0;
+}
+ 
+#event-section input[type="date"],
+#event-section input[type="text"] {
+    margin: 10px 0;
+    padding: 5px;
+    width: 80%;
+}
+ 
+#event-section button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#event-section button:hover {
+    background: var(--secondary-color);
+}
+
+.event-marker {
+    position: relative;
+}
+ 
+.event-marker::after {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+ 
+/* event tooltip styling */
+.event-tooltip {
+    position: absolute;
+    background-color: rgba(234, 232, 232, 0.763);
+    color: black;
+    padding: 10px;
+    border-radius: 4px;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    transition: all 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+ 
+.event-marker:hover .event-tooltip {
+    display: block;
+}
+ 
+/* Reminder section styling */
+#reminder-section {
+    padding: 10px;
+    background: #f5f5f5;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+}
+ 
+#reminder-section h3 {
+    color: var(--primary-color);
+    font-size: 18px;
+    margin: 0;
+}
+ 
+#reminderList {
+    list-style: none;
+    padding: 0;
+}
+ 
+#reminderList li {
+    margin: 5px 0;
+    font-size: 16px;
+}
+ 
+/* Style for the delete buttons */
+.delete-event {
+    background: rgb(237, 19, 19);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+    align-items: right;
+}
+ 
+/* Buttons in the calendar */
+.button-container-calendar button {
+    cursor: pointer;
+    background: green;
+    color: #fff;
+    border: 1px solid green;
+    border-radius: 4px;
+    padding: 5px 10px;
+}
+ 
+/* Calendar table */
+.table-calendar {
+    border-collapse: collapse;
+    width: 100%;
+}
+ 
+.table-calendar td,
+.table-calendar th {
+    padding: 12px;
+    border: 1px solid #e2e2e2;
+    text-align: center;
+    vertical-align: top;
+}
+ 
+/* Date picker */
+.date-picker.selected {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    outline: 1px dashed #00BCD4;
+}
+ 
+.date-picker.selected span {
+    border-bottom: 2px solid currentColor;
+}
+ 
+/* Day-specific styling */
+.date-picker:nth-child(1) {
+    color: red;
+    /* Sunday */
+}
+ 
+.date-picker:nth-child(6) {
+    color: green;
+    /* Friday */
+}
+ 
+/* Hover effect for date cells */
+.date-picker:hover {
+    background-color: var(--secondary-color);
+    color: white;
+    cursor: pointer;
+}
+ 
+/* Header for month and year */
+#monthAndYear {
+    text-align: center;
+    margin-bottom: -23px;
+}
+ 
+/* Navigation buttons */
+.button-container-calendar {
+    position: relative;
+    margin-bottom: 1em;
+    overflow: hidden;
+    clear: both;
+}
+ 
+#previous {
+    float: left;
+}
+ 
+#next {
+    float: right;
+}
+ 
+/* Footer styling */
+.footer-container-calendar {
+    margin-top: 1em;
+    border-top: 1px solid #dadada;
+    padding: 10px 0;
+}
+ 
+.footer-container-calendar select {
+    cursor: pointer;
+    background: #ffffff;
+    color: #585858;
+    border: 1px solid #bfc5c5;
+    border-radius: 3px;
+    padding: 5px 1em;
+}
+
+ul li
+{
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.2s;
+    list-style-type: none;
+
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#myUL li:hover
+{
+    background: var(--secondary-color);
+}
+
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+#myUL li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+
+#myUL /* Style the close button */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+    background-color: #f44336;
+    color: white;
+  }
+
+  /* Style the header */
+.header {
+    background-color: var(--secondary-color);
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+}
+  
+  /* Clear floats after the header */
+.header:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  
+  /* Style the input */
+.header input {
+    margin: 0;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+}
+  
+  /* Style the "Add" button */
+.addBtn {
+    padding: 10px;
+    width: 25%;
+    background: #d9d9d9;
+    color: #555;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0 5px 5px 0;
+}
+  
+.addBtn:hover {
+    background-color: #bbb;
+}
+
+.dropdown
+{
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content
+{
+    display: none;
+    position: absolute;
+    background-color: #d9d9d9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    height: fit-content;
+    align-items: center;
+    margin-top: -6px;
+}
+
+.dropdown:hover .dropdown-content
+{
+    display: block;
+}
+
+.dropdown-content div a
+{
+    width: 160px;
+    color: #000;
+}
+
+.dropdown-content div:hover 
+{
+    background-color: var(--background-color);
+}
+
+#logout
+{
+    color: red;
+}
+
+.class-list-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    overflow-y: auto;
+}
+
+.class-list-table th,
+.class-list-table td {
+    padding: 10px;
+    border-bottom: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.class-list-table th {
+    background-color: var(--primary-color);
+    color: #fff;
 }
