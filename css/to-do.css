@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu';
+}
+
+header {
+    color: white;
+    height: 100px;
+    line-height: 100px;
+    border-bottom: 1px solid #CCD1D1;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    z-index: 999;
+}
+
+header h1{
+    padding-left: 25px;
+    float:left;
+    padding-right: 60px;
+    color: #7C9F6F;
+}
+
+.topnav{
+    padding-left: 50px;
+}
+
+.topnav a{
+    padding: 0px 10px;
+    text-decoration: none;
+    color: grey;
+    font-size: 15px;
+}
+
+.active {
+    font-weight: 500;
+    border-bottom: 2px solid;
+}
+
+aside{
+    padding-top: 125px;
+    padding-left: 75px;
+    width: 250px;
+    border-right: 1px solid #D6DBDF;
+    height: 100vh;
+    float: left;
+    display: block;
+    position: fixed;
+    z-index: 10;
+}
+
+aside h1{
+    padding-bottom: 20px;
+}
+
+.sidenav{
+    display: flex;
+    flex-direction: column;
+}
+
+.sidenav a{
+    text-decoration: none;
+    padding: 10px;
+}
+
+.sidenav :not(.active2){
+    color: grey;
+}
+
+.active2{
+    color: #7C9F6F;
+    font-weight: 400;
+    background-color: #EBEDEF;
+    width: 92px;
+    border-radius: 10px;
+}
+
+.logout{
+    padding-top: 20px;
+    padding-left: 10px;
+    color: red;
+}
+
+main{
+    display:block;
+    float: left;
+    padding: 100px 0px 0px 250px
+}
+
+.collapsible {
+    color: black;
+    cursor: pointer;
+    padding: 18px;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    border-radius: 10px;
+    width: 1070px;
+    background-color: white;
+    border: 1px solid #CCD1D1;
+    transition: 0.3s;
+  }
+  
+  .active3, .collapsible:hover {
+    background-color: #7C9F6F;
+    color: white;
+  }
+  
+  .content {
+    margin: 10px 0px 20px 0px;
+    padding: 18px;
+    display: none;
+    overflow: hidden;
+    background-color: white;
+    width: 1070px;
+    border-radius: 10px;
+    border: 1px solid #CCD1D1;
+    align-items: center;
+  }
+
+.content h1{
+    font-size: 15px;
+    font-weight: 400;
+    padding-bottom: 5px;
+}
+
+.content p{
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.right{
+    float: right;
+    text-align: right;
+}
+
+.left{
+    float: left;
+}
+
+.tasklist{
+    margin: 50px 0px 0px 50px;
+}
+
+.time{
+    padding-bottom: 10px;
+}
+
+.number{
+    float: right;
+}
