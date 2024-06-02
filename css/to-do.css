@@ -1,3 +1,11 @@
+:root {
+    --primary-color: #5aa55c;
+    --secondary-color: #4CAF50;
+    --background-color: #fff;
+    --border-color: #969696;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,14 +13,19 @@
     font-family: 'Ubuntu';
 }
 
+body
+{
+    background-color: var(--primary-color);
+}
+
 header {
-    color: white;
+    color: var(--background-color);
     height: 100px;
     line-height: 100px;
-    border-bottom: 1px solid #CCD1D1;
+    border-bottom: var(--border-color);
     position: fixed;
     width: 100%;
-    background-color: white;
+    background-color: var(--background-color);
     z-index: 999;
 }
 
@@ -43,11 +56,12 @@ aside{
     padding-top: 125px;
     padding-left: 75px;
     width: 250px;
-    border-right: 1px solid #D6DBDF;
+    border-right: var(--border-color);
     height: 100vh;
     float: left;
     display: block;
     position: fixed;
+    background-color: var(--background-color);
     z-index: 10;
 }
 

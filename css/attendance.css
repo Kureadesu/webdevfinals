@@ -50,3 +50,73 @@ header h1{
     border-bottom: 2px solid;
     
 }
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    height: fit-content;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card {
+    background-color: var(--background-color);
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px var(--shadow-color);
+    border-radius: 5px;
+}
+
+.card h2 {
+    margin-top: 0;
+}
+
+.class-list-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    overflow-y: auto;
+}
+
+.class-list-table th,
+.class-list-table td {
+    padding: 10px;
+    border-bottom: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.class-list-table th {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.class-list-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    overflow-y: auto;
+}
+
+.class-list-table th,
+.class-list-table td {
+    padding: 10px;
+    border-bottom: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.class-list-table th {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.class-list-btn {
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    font-size: 15px;
+}
