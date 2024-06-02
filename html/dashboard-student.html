@@ -17,6 +17,7 @@
             <a href="../html/attendance-student.html">Attendance</a>
             <a href="./grades.html">Grades</a>
             <a href="../html/profile.html">Profile</a>
+            <!--
             <div class="dropdown">
                 <a href="#">Class</a>
                 <div class="dropdown-content">
@@ -37,10 +38,12 @@
                     </div>
                 </div>
             </div> 
+            -->
             <a href="../html/login.html" id="logout">Logout</a>
         </nav>
     </header>
     <div class="main-container">
+        <!--calendar-->
         <div class="card">
             <div class="wrapper">
                 <div class="container-calendar">
@@ -118,38 +121,37 @@
                 </div>
             </div>
         </div>
-        <div class="card">
-            <button id="#myDIV" class="header" onclick="location.href='../html/to-do.html';">
-                <h2>To-do List</h2>
-            </button>
-            <ul id="myUL">
-            </ul>
-        </div>
-        <div class="card">
-            <h2>Reminders</h2>
-            <table id="table-reminders" class="class-list-table">
-                <thead>
-                    <th class="subj">Subject</th>
-                    <th class="desc">Description</th>
-                    <th class="deadline">Deadline</th>
-                    <th class="status">Status</th>
-                    <th class="link"></th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td id="data-subject"></td>
-                        <td id="data-description"></td>
-                        <td id="data-deadline"></td>
-                        <td id="data-status"></td>
-                        <td id="data-link"></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="card">
-            
-        </div>
-    </div>
+        <div class="container1">
+            <div class="card">
+                <h2>Reminders</h2>
+                <table id="table-reminders" class="class-list-table">
+                    <thead>
+                        <th class="subj">Subject</th>
+                        <th class="desc">Description</th>
+                        <th class="deadline">Deadline</th>
+                        <th class="status">Status</th>
+                        <th class="link"></th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="data-subject"></td>
+                            <td id="data-description"></td>
+                            <td id="data-deadline"></td>
+                            <td id="data-status"></td>
+                            <td id="data-link"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+             <!--next line-->
+             <div class="card">
+                <button id="#myDIV" class="header" onclick="location.href='../html/to-do.html';">
+                    <h2>To-do List</h2>
+                </button>
+                <ul id="myUL">
+                </ul>
+            </div>
+        </div>  
     <script src="../js/to-do.js"></script>
     <script src="../js/calendar.js"></script>
 </body>
