@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stream | ActTrack</title>
+    <link rel="stylesheet" href="../css/faculty.css">
+    <link rel="stylesheet" href="../misc/all.min.css">
+    <link rel="stylesheet" href="../misc/fontawesome.min.css">
+    <link rel="stylesheet" href="../misc/fonts.css">
+</head>
+<body>
+    <input type="checkbox" id="menuToggle" class="menu-toggle">
+    <header>
+        <div class="header-left">
+            <a href="../html/faculty-dashboard.html">
+            <img src="../static/logo-transparent.png" width="50" height="50" alt="logo">
+            <span class="logo-name">ActTrack</span></a>
+        </div>
+        <div class="header-right">
+            <img width="30" height="30" src="https://img.icons8.com/ios/50/plus--v1.png" alt="plus--v1"/>
+            <img src="../static/tristan.png" width="25" height="25" alt="pfp">
+        </div>
+    </header>
+
+    <aside class="navbar open">
+        <div class="navbar-group">
+            <a href="#" class="link">
+                <i class="fa-solid fa-house"></i>
+                <span class="link-name">Home</span>
+            </a>
+            <a href="#" class="link">
+                <i class="fa-solid fa-calendar"></i>
+                <span class="link-name">Calendar</span>
+            </a>
+        </div>
+        <div class="navbar-group">
+            <a href="#" class="link" id="dropdown-1">
+                <i class="fa-solid fa-chalkboard-user"></i>
+                <span class="link-name toggle">Teaching</span>
+            </a>
+            <div id="toggle-group">
+                <a href="#" class="link visible">
+                    <i class="fa-solid fa-folder"></i>
+                    <span class="link-name">Submissions</span>
+                </a>
+                <a href="#" class="link visible active">
+                    <!--<img width="24" height="24" src="#" alt="home"/>-->
+                    <i class="fa-solid fa-circle"></i>
+                    <div class="class-info">
+                        <span class="link-name">Web Design Development</span>
+                        <span class="link-class">BSAIS 2-1</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="navbar-group">
+            <a href="#" class="link" id="dropdown-1">
+                <i class="fa-solid fa-archive"></i>
+                <span class="link-name">Archived Classes</span>
+            </a>
+            <a href="#" class="link" id="dropdown-1">
+                <i class="fa-solid fa-gear"></i>
+                <span class="link-name">Settings</span>
+            </a>
+        </div>
+    </aside>
+    <!--main content-->
+    <main>
+        <nav>
+            <a href="../html/webdev.html" class="link active-1">Stream</a>
+            <a href="../html/webdev-classwork.html" class="link">Classwork</a>
+            <a href="../html/webdev-people.html" class="link">People</a>
+            <a href="../html/webdev-grades.html" class="link">Grades</a>
+        </nav>
+        
+        <div class="stream-container">
+            <div class="subject">
+                <div class="sub-info">
+                    <h1 class="subject-name">Web Design Development</h1>
+                    <span>BSAIS 2-1</span>
+                </div>
+            </div>
+
+            <div class="sub-container">
+                <div class="sub-left">
+                    <div class="card">
+                        <span>Class code</span>
+                        <i class="fa-solid fa-ellipsis-vertical option"></i>
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <h1>1e2a3rhb</h1>
+                            <i class="fa-solid fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <span>Upcoming</span>
+                        <br>
+                        <a href="#">
+                            <span>View all</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="sub-right">
+                    <div class="card post">
+                        <img src="../static/tristan.png" width="50" height="50" alt="pfp" style="border-radius: 50%;">
+                        <input type="text" name="text" id="stream-announcement" placeholder="Write something..." class="form-input">
+                        <input type="submit" value="Post" id="submit-btn">
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

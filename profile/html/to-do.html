@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>To-Do</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/to-do.css">
+    <link rel="stylesheet" href="../misc/fonts.css">
+    <link rel="stylesheet" href="../misc/all.min.css">
+    <link rel="stylesheet" href="../misc/fontawesome.min.css">
+</head>
+<body>
+    <header>
+        <a href="../html/dashboard-student.html">
+        <h1>ActTrack</h1></a>
+        <nav class="topnav"> 
+            <a href="../html/dashboard-student.html">Dashboard</a>
+            <a href="../html/profile.html">Profile</a>
+            <a href="../html/to-do.html" class="active">To-Do</a>
+        </nav>
+    </header>
+
+    <aside>
+        <h1>Task List</h1>
+        <nav class="sidenav">
+            <a href="../html/to-do.html" class="active2">Upcoming</a>
+            <a href="../html/to-do_overdue.html">Overdue</a>
+            <a href="../html/to-do_done.html">Done</a>
+        </nav>
+    </aside>
+
+    <main>
+        <div class="tasklist">
+            <div class="time">
+                <div class="icon"></div>
+                <button type="button" class="collapsible">No due date <span class="number">*<!-- number placeholder --></span></button>
+                <div class="content">
+                    <div class="left">
+                        <h1>Task Name</h1>
+                        <p>Subject</p>
+                    </div>
+                    <div class="right">
+                        <p>Due date</p>
+                        <p>Time</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="time">
+                <div class="icon"></div>
+                <button type="button" class="collapsible">This week<span class="number">*<!-- number placeholder --></span></button>
+                <div class="content">
+                    <div class="left">
+                        <h1>Task Name</h1>
+                        <p>Subject</p>
+                    </div>
+                    <div class="right">
+                        <p>Due date</p>
+                        <p>Time</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="time">
+                <div class="icon"></div>
+                <button type="button" class="collapsible">Next week<span class="number">*<!-- number placeholder --></span></button>
+                <div class="content">
+                    <div class="left">
+                        <h1>Task Name</h1>
+                        <p>Subject</p>
+                    </div>
+                    <div class="right">
+                        <p>Due date</p>
+                        <p>Time</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="time">
+                <div class="icon"></div>
+                <button type="button" class="collapsible">Later<span class="number">*<!-- number placeholder --></span></button>
+                <div class="content">
+                    <div class="left">
+                        <h1>Task Name</h1>
+                        <p>Subject</p>
+                    </div>
+                    <div class="right">
+                        <p>Due date</p>
+                        <p>Time</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active3");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        }
+        </script>
+</body>
+
+</html>
