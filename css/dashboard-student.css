@@ -15,539 +15,159 @@
 
 body
 {
-    background: var(--primary-color);
+    background: #7C9F6F;
 }
+
 header {
-    background: var(--background-color);
-    height: 100px;
-    line-height: 100px;
+    height: 75px;
+    line-height: 75px;
     border-bottom: 1px solid #CCD1D1;
-    position: sticky;
+    position: fixed;
     z-index: 9999;
+    width: 100%;
+    background: white;
 }
 
 header h1{
-    padding-left: 25px;
+    padding-left: 55px;
     float:left;
     padding-right: 60px;
     color: #7C9F6F;
 }
 
-.topnav{
-    padding-left: 50px;
-    font-size: 18px;
+header div{
+    padding-left: 1.5rem;
 }
 
-.topnav a{
-    padding: 0px 10px;
-    text-decoration: none;
-    color: grey;
-    font-size: 15px;
+header i{
+    padding-left: 15px;
 }
 
 .active {
-    font-weight: 500;
-    border-bottom: 2px solid;
+    background-color: #ddd;
+    width: 100%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
+
+
+
+
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-button {
+    position: absolute;
+    left: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: inline-block;
+    color: gray;
+}
+
+.aside-menu {
+    position: fixed;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: var(--background-color);
+    color: white;
+    overflow-y: auto;
+    transition: left 0.3s ease;
+    padding-top: 75px;
+}
+
+.aside-menu ul{
+    list-style: none;
+    padding: 0;
+}
+
+.aside-menu li{
+    margin: 1rem 0;
+    padding-bottom: 10px;
+}
+
+.aside-menu a{
+    padding: 9px 90px 9px 20px;
+    text-decoration: none;
+    color: grey;
+    font-size: .9rem;
+}
+
+.aside-menu i{
+    padding-right: 30px;
+    padding-left: 10px;
+}
+
+.menu-toggle:checked ~ .aside-menu {
+    left: 0;
+}
+
+.menu-toggle:checked ~ main {
+    margin-left: 250px;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: inline-block;
+}
+
+.aside-menu nav{
+    border-bottom: solid 1px #CCD1D1;
+}
+
+
+
+
+
 
 main{
     display:block;
     float: left;
+    transition: margin-left 0.3s ease;
+    padding-top: 75px;
 }
 
-img{
-    border-radius: 50%;
-    border: 6px solid #7C9F6F;
-    padding: 2px;
-}
-
-.pfp{
+.subject-container {
     display: flex;
-}
-
-.name{
-    font-size: 23px;
-    font-weight: 500;
-    padding-bottom: 10px;
-}
-
-.studno{
-    font-style: italic;
-}
-
-.pfp p:not(.name){
-    color: grey;
-    padding-bottom: 5px;
-}
-
-.info{
-    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
     justify-content: center;
-    align-content: center;
-    flex-direction: column;
-    padding-left: 50px;
+    padding: 2rem;
 }
 
-.border {
-    border: 1px solid #D6DBDF;
-    border-radius: 10px;
-    margin: 50px;
-    padding: 40px 70px;
-    width: 1070px;
-}
-
-.mainheading{
-    font-size: 20px;
-    font-weight: 500;
-    padding-bottom: 25px;
-}
-
-.heading{
-    font-size: 12px;
-    color: grey;
-}
-
-.text{
-    font-size: 15px;
-}
-
-.container{
-    display:flex;
-    justify-content: space-between;
-}
-
-.top{
-    padding-bottom: 25px;
-}
-
-.heading{
-    padding-bottom: 10px;
-}
-
-button{
-    float: right;
-    padding: 10px 20px;
-    border-radius: 20px;
-    border: 1px solid #7C9F6F;
-    background-color: #7C9F6F;
-    color: white;
-}
-
-#head-sidenav{
-    text-decoration: none;
-    color: #000;
-}
-
-.main-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-}
-
-.card {
-    background-color: var(--background-color);
-    padding: 20px;
-    margin: 10px;
-    width: fit-content;
-    border: 1px solid #ddd;
-    box-shadow: 0 0 10px var(--shadow-color);
-    border-radius: 5px;
-}
-
-.card h2 {
-    margin-top: 0;
-}
-
-.title-container
-{
-    display: flex;
-    justify-content: space-between;
-}
-
-.container1
-{
-    display: flex;
-    flex-direction: column;
-}
-/*calendar*/
-.wrapper {
-    max-width: fit-content;
-    margin: 15px auto;
-}
- 
-/* Calendar container */
-.container-calendar {
-    background: #ffffff;
-    padding: 15px;
-    max-width: 900px;
-    margin: 2px auto;
-    overflow: auto;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-}
- 
-/* Event section styling */
-#event-section {
-    padding: 10px;
-    background: #f5f5f5;
-    margin: 20px 0;
-    border: 1px solid #ccc;
-}
- 
-.container-calendar #left h1 {
-    color: var(--primary-color);
+.subject-card {
+    background: var(--background-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    width: 200px;
+    padding: 1rem;
     text-align: center;
-    background-color: #f2f2f2;
-    margin: 0;
-    padding: 10px 0;
-}
- 
-#event-section h3 {
-    color: var(--primary-color);
-    font-size: 18px;
-    margin: 0;
-}
- 
-#event-section input[type="date"],
-#event-section input[type="text"] {
-    margin: 10px 0;
-    padding: 5px;
-    width: 80%;
-}
- 
-#event-section button {
-    background: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-#event-section button:hover {
-    background: var(--secondary-color);
+.subject-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.event-marker {
-    position: relative;
-}
- 
-.event-marker::after {
-    content: '';
-    display: block;
-    width: 6px;
-    height: 6px;
-    background-color: red;
-    border-radius: 50%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
- 
-/* event tooltip styling */
-.event-tooltip {
-    position: absolute;
-    background-color: rgba(234, 232, 232, 0.763);
-    color: black;
-    padding: 10px;
-    border-radius: 4px;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: none;
-    transition: all 0.3s;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
- 
-.event-marker:hover .event-tooltip {
-    display: block;
-}
- 
-/* Reminder section styling */
-#reminder-section {
-    padding: 10px;
-    background: #f5f5f5;
-    margin: 20px 0;
-    border: 1px solid #ccc;
-}
- 
-#reminder-section h3 {
-    color: var(--primary-color);
-    font-size: 18px;
-    margin: 0;
-}
- 
-#reminderList {
-    list-style: none;
-    padding: 0;
-}
- 
-#reminderList li {
-    margin: 5px 0;
-    font-size: 16px;
-}
- 
-/* Style for the delete buttons */
-.delete-event {
-    background: rgb(237, 19, 19);
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    margin-left: 10px;
-    align-items: right;
-}
- 
-/* Buttons in the calendar */
-.button-container-calendar button {
-    cursor: pointer;
-    background: green;
-    color: #fff;
-    border: 1px solid green;
-    border-radius: 4px;
-    padding: 5px 10px;
-}
- 
-/* Calendar table */
-.table-calendar {
-    border-collapse: collapse;
-    width: 100%;
-}
- 
-.table-calendar td,
-.table-calendar th {
-    padding: 12px;
-    border: 1px solid #e2e2e2;
-    text-align: center;
-    vertical-align: top;
-}
- 
-/* Date picker */
-.date-picker.selected {
-    background-color: #f2f2f2;
-    font-weight: bold;
-    outline: 1px dashed #00BCD4;
-}
- 
-.date-picker.selected span {
-    border-bottom: 2px solid currentColor;
-}
- 
-/* Day-specific styling */
-.date-picker:nth-child(1) {
-    color: red;
-    /* Sunday */
-}
- 
-.date-picker:nth-child(6) {
-    color: green;
-    /* Friday */
-}
- 
-/* Hover effect for date cells */
-.date-picker:hover {
-    background-color: var(--secondary-color);
-    color: white;
-    cursor: pointer;
-}
- 
-/* Header for month and year */
-#monthAndYear {
-    text-align: center;
-    margin-bottom: -23px;
-}
- 
-/* Navigation buttons */
-.button-container-calendar {
-    position: relative;
-    margin-bottom: 1em;
-    overflow: hidden;
-    clear: both;
-}
- 
-#previous {
-    float: left;
-}
- 
-#next {
-    float: right;
-}
- 
-/* Footer styling */
-.footer-container-calendar {
-    margin-top: 1em;
-    border-top: 1px solid #dadada;
-    padding: 10px 0;
-}
- 
-.footer-container-calendar select {
-    cursor: pointer;
-    background: #ffffff;
-    color: #585858;
-    border: 1px solid #bfc5c5;
-    border-radius: 3px;
-    padding: 5px 1em;
+.subject-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #333;
 }
 
-ul li
-{
-    cursor: pointer;
-    position: relative;
-    padding: 12px 8px 12px 40px;
-    background: #eee;
-    font-size: 18px;
-    transition: 0.2s;
-    list-style-type: none;
-
-  /* make the list items unselectable */
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-#myUL li:hover
-{
-    background: var(--secondary-color);
-}
-
-/* When clicked on, add a background color and strike out text */
-ul li.checked {
-    background: #888;
-    color: #fff;
-    text-decoration: line-through;
-}
-
-/* Add a "checked" mark when clicked on */
-#myUL li.checked::before {
-    content: '';
-    position: absolute;
-    border-color: #fff;
-    border-style: solid;
-    border-width: 0 2px 2px 0;
-    top: 10px;
-    left: 16px;
-    transform: rotate(45deg);
-    height: 15px;
-    width: 7px;
-}
-
-#myUL /* Style the close button */
-.close {
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 12px 16px 12px 16px;
-}
-
-.close:hover {
-    background-color: #f44336;
-    color: white;
-  }
-
-  /* Style the header */
-.header {
-    background-color: var(--secondary-color);
-    padding: 30px 40px;
-    color: white;
-    text-align: center;
-    border-radius: 10px;
-}
-  
-  /* Clear floats after the header */
-.header:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-  
-  /* Style the input */
-.header input {
-    margin: 0;
-    border: none;
-    border-radius: 5px 0 0 5px;
-    width: 75%;
-    padding: 10px;
-    float: left;
-    font-size: 16px;
-}
-  
-  /* Style the "Add" button */
-.addBtn {
-    padding: 10px;
-    width: 25%;
-    background: #d9d9d9;
-    color: #555;
-    float: left;
-    text-align: center;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-    border-radius: 0 5px 5px 0;
-}
-  
-.addBtn:hover {
-    background-color: #bbb;
-}
-
-.dropdown
-{
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content
-{
-    display: none;
-    position: absolute;
-    background-color: #d9d9d9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    height: fit-content;
-    align-items: center;
-    margin-top: -6px;
-}
-
-.dropdown:hover .dropdown-content
-{
-    display: block;
-}
-
-.dropdown-content div a
-{
-    width: 160px;
-    color: #000;
-}
-
-.dropdown-content div:hover 
-{
-    background-color: var(--background-color);
-}
-
-#logout
-{
-    color: red;
-}
-
-.class-list-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
-    overflow-y: auto;
-}
-
-.class-list-table th,
-.class-list-table td {
-    padding: 10px;
-    border-bottom: 1px solid var(--border-color);
-    text-align: center;
-}
-
-.class-list-table th {
-    background-color: var(--primary-color);
-    color: #fff;
+.yrsec {
+    font-size: 0.9rem;
+    color: #666;
 }

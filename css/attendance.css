@@ -15,108 +15,158 @@
 
 body
 {
-    background: var(--primary-color);
+    background: #7C9F6F;
 }
 
 header {
-    background: var(--background-color);
-    height: 100px;
-    line-height: 100px;
+    height: 75px;
+    line-height: 75px;
     border-bottom: 1px solid #CCD1D1;
-    position: sticky;
+    position: fixed;
     z-index: 9999;
+    width: 100%;
+    background: white;
 }
 
 header h1{
-    padding-left: 25px;
+    padding-left: 55px;
     float:left;
     padding-right: 60px;
     color: #7C9F6F;
 }
 
-.topnav{
-    padding-left: 50px;
+header div{
+    padding-left: 1.5rem;
 }
 
-.topnav a{
-    padding: 0px 10px;
-    text-decoration: none;
-    color: grey;
-    font-size: 15px;
+header i{
+    padding-left: 15px;
 }
 
 .active {
-    font-weight: 500;
-    border-bottom: 2px solid;
-    
+    background-color: #ddd;
+    width: 100%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
-.main-container {
+
+
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-button {
+    position: absolute;
+    left: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: inline-block;
+    color: gray;
+}
+
+.aside-menu {
+    position: fixed;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: var(--background-color);
+    color: white;
+    overflow-y: auto;
+    transition: left 0.3s ease;
+    padding-top: 75px;
+}
+
+.aside-menu ul{
+    list-style: none;
+    padding: 0;
+}
+
+.aside-menu li{
+    margin: 1rem 0;
+    padding-bottom: 10px;
+}
+
+.aside-menu a{
+    padding: 9px 90px 9px 20px;
+    text-decoration: none;
+    color: grey;
+    font-size: .9rem;
+}
+
+.aside-menu i{
+    padding-right: 30px;
+    padding-left: 10px;
+}
+
+.menu-toggle:checked ~ .aside-menu {
+    left: 0;
+}
+
+.menu-toggle:checked ~ main {
+    margin-left: 250px;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: inline-block;
+}
+
+.aside-menu nav{
+    border-bottom: solid 1px #CCD1D1;
+}
+
+
+
+
+
+
+main{
+    display:block;
+    float: left;
+    padding: 2rem;
+    transition: margin-left 0.3s ease;
+    padding-top: 75px;
+}
+
+.subject-container {
     display: flex;
     flex-wrap: wrap;
-    height: fit-content;
+    gap: 1rem;
     justify-content: center;
-    padding: 20px;
 }
 
-.card {
-    background-color: var(--background-color);
-    padding: 20px;
-    margin: 20px;
-    border: 1px solid #ddd;
-    box-shadow: 0 0 10px var(--shadow-color);
-    border-radius: 5px;
-}
-
-.card h2 {
-    margin-top: 0;
-}
-
-.class-list-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
-    overflow-y: auto;
-}
-
-.class-list-table th,
-.class-list-table td {
-    padding: 10px;
-    border-bottom: 1px solid var(--border-color);
+.subject-card {
+    background: var(--background-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    width: 200px;
+    padding: 1rem;
     text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.class-list-table th {
-    background-color: var(--primary-color);
-    color: #fff;
+.subject-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.class-list-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
-    overflow-y: auto;
+.subject-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #333;
 }
 
-.class-list-table th,
-.class-list-table td {
-    padding: 10px;
-    border-bottom: 1px solid var(--border-color);
-    text-align: center;
-}
-
-.class-list-table th {
-    background-color: var(--primary-color);
-    color: #fff;
-}
-
-.class-list-btn {
-    cursor: pointer;
-    background-color: var(--primary-color);
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    text-transform: capitalize;
-    font-size: 15px;
+.yrsec {
+    font-size: 0.9rem;
+    color: #666;
 }

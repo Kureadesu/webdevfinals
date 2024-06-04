@@ -10,71 +10,88 @@
     <link rel="stylesheet" href="../css/grades.css">
 </head>
 <body>
+    <input type="checkbox" id="menuToggle" class="menu-toggle">
     <header>
-        <a href="../html/dashboard-student.html"><!--link to homepage / dashboard-->
-        <h1>ActTrack</h1></a>
-        <nav class="topnav"> 
-            <a href="../html/attendance-student.html">Attendance</a>
-            <a href="./grades.html" class="active">Grades</a>
-            <a href="../html/profile.html">Profile</a>
-            <a href="../html/login.html" id="logout">Logout</a>
-        </nav>
+        <div>
+            <label for="menuToggle" class="menu-button"><i class="fa-solid fa-bars"></i></label>
+            <a href="../html/dashboard-student.html"></a><h1>ActTrack</h1></a>
+        </div>
     </header>
-    <main class="main-container">
-        <div class="card">
-            <h1>Grades</h1>
-            <table id="class-list-table-1" class="class-list-table">
-                <thead>
-                    <tr>
-                        <th>Subject ID</th>
-                        <th>Subject Description</th>
-                        <th>Instructor</th>
-                        <th>Units</th>
-                        <th>Prelim</th>
-                        <th>Midterm</th>
-                        <th>Final</th>
-                        <th>GWA</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Add student data here -->
-                    <tr>
-                        <td>IS221</td>
-                        <td>Web Design Development</td>
-                        <td>Ricafort, Sheryl Ann B.</td>
-                        <td>3</td>
-                        <td>85</td>
-                        <td>90</td>
-                        <td>92</td>
-                        <td><b>89.33</b></td>
-                    </tr>
-                    <tr>
-                        <td>AIS223</td>
-                        <td>Advance Airline Ticketing</td>
-                        <td>Caguia, Cielito M.</td>
-                        <td>3</td>
-                        <td>80</td>
-                        <td>85</td>
-                        <td>90</td>
-                        <td><b>85.00</b></td>
-                    </tr>
-                    <tr>
-                        <td>IS222</td>
-                        <td>System Analysis and Design</td>
-                        <td>Dasalla, Jerum B.</td>
-                        <td>3</td>
-                        <td>86</td>
-                        <td>90</td>
-                        <td>94</td>
-                        <td><b>90.00</b></td>
-                    </tr>
-                </tbody>
-            </table>
-            <br>
-            <button class="class-list-btn" onclick="location.href = './dashboard-student.html'">
-                Back to Dashboard
-            </button>
-        </div> 
+    <aside class="aside-menu">
+        <nav>
+            <ul>
+                <li><a href="../html/dashboard-student.html"><i class="fa-solid fa-house"></i>Dashboard</a></li>
+                <li><a href="../html/attendance-student.html"><i class="fa-solid fa-clipboard-user"></i>Attendance</a></li>
+                <li><a href="../html/grades.html" class="active"><i class="fa-solid fa-ranking-star"></i>Grades</a></li>
+                <li><a href="../html/profile.html"><i class="fa-solid fa-user"></i>Profile</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </nav>
+    </aside>
+    <main>
+        <div class="card-container">
+            <div class="card">
+                <h1>Grades</h1>
+                <table id="class-list-table-1" class="class-list-table">
+                    <thead>
+                        <tr>
+                            <th>Subject ID</th>
+                            <th>Subject Description</th>
+                            <th>Instructor</th>
+                            <th>Units</th>
+                            <th>Prelim</th>
+                            <th>Midterm</th>
+                            <th>Final</th>
+                            <th>GWA</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Add student data here -->
+                        <tr>
+                            <td>IS221</td>
+                            <td>Web Design Development</td>
+                            <td>Ricafort, Sheryl Ann B.</td>
+                            <td>3</td>
+                            <td>85</td>
+                            <td>90</td>
+                            <td>92</td>
+                            <td><b>89.33</b></td>
+                        </tr>
+                        <tr>
+                            <td>AIS223</td>
+                            <td>Advance Airline Ticketing</td>
+                            <td>Caguia, Cielito M.</td>
+                            <td>3</td>
+                            <td>80</td>
+                            <td>85</td>
+                            <td>90</td>
+                            <td><b>85.00</b></td>
+                        </tr>
+                        <tr>
+                            <td>IS222</td>
+                            <td>System Analysis and Design</td>
+                            <td>Dasalla, Jerum B.</td>
+                            <td>3</td>
+                            <td>86</td>
+                            <td>90</td>
+                            <td>94</td>
+                            <td><b>90.00</b></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <button class="class-list-btn" onclick="location.href = './dashboard-student.html'">
+                    Back to Dashboard
+                </button>
+            </div> 
+        </div>
     </main>
     
     <script src="../js/classlist.js"></script>

@@ -10,150 +10,55 @@
     <link rel="stylesheet" href="../css/dashboard-student.css">
 </head>
 <body>
+    <input type="checkbox" id="menuToggle" class="menu-toggle">
     <header>
-        <a href="../html/dashboard-student.html"><!--link to homepage / dashboard-->
-        <h1>ActTrack</h1></a>
-        <nav class="topnav"> 
-            <a href="../html/dashboard-student.html" class="active">Dashboard</a>
-            <a href="../html/attendance-student.html">Attendance</a>
-            <a href="./grades.html">Grades</a>
-            <a href="../html/profile.html">Profile</a>
-            <!--
-            <div class="dropdown">
-                <a href="#">Class</a>
-                <div class="dropdown-content">
-                    <div class="content">
-                        <a href="#">Modules</a>
-                    </div>
-                    <div class="content">
-                        <a href="#">Quizzes</a>
-                    </div>
-                    <div class="content">
-                        <a href="#">Assignments</a>
-                    </div>
-                    <div class="content">
-                        <a href="#">Projects</a>
-                    </div>
-                    <div class="content">
-                        <a href="#">Exam</a>
-                    </div>
-                </div>
-            </div> 
-            -->
-            <a href="../html/login.html" id="logout">Logout</a>
-        </nav>
-    </header>
-    <div class="main-container">
-        <!--calendar-->
-        <div class="card">
-            <div class="wrapper">
-                <div class="container-calendar">
-                    <div id="left">
-                        <h1>Calendar</h1>
-                        <div id="event-section">
-                            <h3>Add Event</h3>
-                            <input type="date" id="eventDate">
-                            <input type="text"
-                                id="eventTitle"
-                                placeholder="Event Title">
-                            <input type="text"
-                                id="eventDescription"
-                                placeholder="Event Description">
-                            <button id="addEvent" onclick="addEvent()">
-                                Add
-                            </button>
-                        </div>
-                        <div id="reminder-section">
-                            <h3>Reminders</h3>
-                            <!-- List to display reminders -->
-                            <ul id="reminderList">
-                                <li data-event-id="1">
-                                    <strong>Event Title</strong>
-                                    - Event Description on Event Date
-                                    <button class="delete-event"
-                                        onclick="deleteEvent(1)">
-                                        Delete
-                                    </button>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div id="right">
-                        <!--calendar-->
-                        <h3 id="monthAndYear"></h3>
-                        <div class="button-container-calendar">
-                            <button id="previous"
-                                    onclick="previous()">
-                                  ‹
-                              </button>
-                            <button id="next"
-                                    onclick="next()">
-                                  ›
-                              </button>
-                        </div>
-                        <table class="table-calendar"
-                               id="calendar"
-                               data-lang="en">
-                            <thead id="thead-month"></thead>
-                            <!-- Table body for displaying the calendar -->
-                            <tbody id="calendar-body"></tbody>
-                        </table>
-                        <div class="footer-container-calendar">
-                            <label for="month">Jump To: </label>
-                            <!-- Dropdowns to select a specific month and year -->
-                            <select id="month" onchange="jump()">
-                                <option value=0>Jan</option>
-                                <option value=1>Feb</option>
-                                <option value=2>Mar</option>
-                                <option value=3>Apr</option>
-                                <option value=4>May</option>
-                                <option value=5>Jun</option>
-                                <option value=6>Jul</option>
-                                <option value=7>Aug</option>
-                                <option value=8>Sep</option>
-                                <option value=9>Oct</option>
-                                <option value=10>Nov</option>
-                                <option value=11>Dec</option>
-                            </select>
-                            <!-- Dropdown to select a specific year -->
-                            <select id="year" onchange="jump()"></select>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div>
+            <label for="menuToggle" class="menu-button"><i class="fa-solid fa-bars"></i></label>
+            <a href="../html/dashboard-student.html"></a><h1>ActTrack</h1></a>
         </div>
-        <div class="container1">
-            <div class="card">
-                <h2>Reminders</h2>
-                <table id="table-reminders" class="class-list-table">
-                    <thead>
-                        <th class="subj">Subject</th>
-                        <th class="desc">Description</th>
-                        <th class="deadline">Deadline</th>
-                        <th class="status">Status</th>
-                        <th class="link"></th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td id="data-subject"></td>
-                            <td id="data-description"></td>
-                            <td id="data-deadline"></td>
-                            <td id="data-status"></td>
-                            <td id="data-link"></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-             <!--next line-->
-             <div class="card">
-                <button id="#myDIV" class="header" onclick="location.href='../html/to-do.html';">
-                    <h2>To-do List</h2>
-                </button>
-                <ul id="myUL">
-                </ul>
-            </div>
-        </div>  
-    <script src="../js/to-do.js"></script>
-    <script src="../js/calendar.js"></script>
+    </header>
+    <aside class="aside-menu">
+        <nav>
+            <ul>
+                <li><a href="../html/dashboard-student.html" class="active"><i class="fa-solid fa-house"></i>Dashboard</a></li>
+                <li><a href="../html/attendance-student.html"><i class="fa-solid fa-clipboard-user"></i>Attendance</a></li>
+                <li><a href="./grades.html"><i class="fa-solid fa-ranking-star"></i>Grades</a></li>
+                <li><a href="../html/profile.html"><i class="fa-solid fa-user"></i>Profile</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </nav>
+    </aside>
+    <main>
+        <div class="subject-container">
+            <a href="#">
+                <div class="subject-card">
+                        <div class="subject-title">Web Design Development</div>
+                        <div class="subid">IS221</div>
+                        <div class="professor">Ricafort, Sheryl Ann B.</div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="subject-card">
+                    <div class="subject-title">Advance Airline Ticketing</div>
+                    <div class="subid">AIS223</div>
+                    <div class="professor">Caguia, Cielito M.</div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="subject-card">
+                    <div class="subject-title">System Analysis and Design</div>
+                    <div class="subid">IS222</div>
+                    <div class="professor">Dasalla, Jerum B.</div>
+                </div>
+            </a>
+        </div>
+    </main>
 </body>
 </html>
