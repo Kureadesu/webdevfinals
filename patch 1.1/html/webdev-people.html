@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="../misc/fonts.css">
 </head>
 <body>
-    <input type="checkbox" id="menuToggle" class="menu-toggle">
     <header>
         <div class="header-left">
             <a href="../html/faculty-dashboard.html">
@@ -18,8 +17,8 @@
             <span class="logo-name">ActTrack</span></a>
         </div>
         <div class="header-right">
-            <img width="30" height="30" src="https://img.icons8.com/ios/50/plus--v1.png" alt="plus--v1"/>
-            <img src="../static/tristan.png" width="25" height="25" alt="pfp">
+            <i class="fa-solid fa-plus" style="font-size: 25px;"></i>
+            <img src="../static/tristan.png" width="50" height="50" alt="pfp">
         </div>
     </header>
 
@@ -41,15 +40,19 @@
             </a>
             <div id="toggle-group">
                 <a href="#" class="link visible">
+                    <i class="fa-solid fa-book"></i>
+                    <span class="link-name">Resources</span>
+                </a>
+                <a href="#" class="link visible">
                     <i class="fa-solid fa-folder"></i>
                     <span class="link-name">Submissions</span>
                 </a>
-                <a href="#" class="link visible active">
+                <a href="#" class="link visible">
                     <!--<img width="24" height="24" src="#" alt="home"/>-->
                     <i class="fa-solid fa-circle"></i>
                     <div class="class-info">
-                        <span class="link-name">Web Design Development</span>
-                        <span class="link-class">BSAIS 2-1</span>
+                        <span class="link-name">Class 1</span>
+                        <span class="link-class">Section</span>
                     </div>
                 </a>
             </div>
@@ -79,5 +82,6 @@
             <h1>Instructor</h1>
         </div>
     </main>
+    <script src="../js/navbar.js"></script>
 </body>
 </html>

@@ -7,11 +7,10 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-    const toggleBtn = document.getElementById("dropdown-1");
-    const content = document.querySelector("#toggle-group");
+const dropdown = document.getElementById('dropdown-1');
+const toggleGroup = document.getElementById('toggle-group');
 
-    toggleBtn.addEventListener("click", function(){
-        content.style.display("block");
-    });
+dropdown.addEventListener('click', () => {
+  // Toggle the visibility of the #toggle-group
+  toggleGroup.classList.toggle('visible');
 });

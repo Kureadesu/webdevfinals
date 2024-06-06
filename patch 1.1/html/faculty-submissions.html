@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submissions | ActTrack</title>
+    <link rel="stylesheet" href="../css/faculty.css">
+    <link rel="stylesheet" href="../misc/all.min.css">
+    <link rel="stylesheet" href="../misc/fontawesome.min.css">
+    <link rel="stylesheet" href="../misc/fonts.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <a href="../html/faculty-dashboard.html">
+            <img src="../static/logo-transparent.png" width="50" height="50" alt="logo">
+            <span class="logo-name">ActTrack</span></a>
+        </div>
+        <div class="header-right">
+            <i class="fa-solid fa-plus" style="font-size: 25px;"></i>
+            <img src="../static/tristan.png" width="50" height="50" alt="pfp">
+        </div>
+    </header>
+
+    <aside class="navbar open">
+        <div class="navbar-group">
+            <a href="../html/faculty-dashboard.html" class="link">
+                <i class="fa-solid fa-house"></i>
+                <span class="link-name">Home</span>
+            </a>
+            <a href="#" class="link">
+                <i class="fa-solid fa-calendar"></i>
+                <span class="link-name">Calendar</span>
+            </a>
+        </div>
+        <div class="navbar-group">
+            <a href="#" class="link" id="dropdown-1">
+                <i class="fa-solid fa-chalkboard-user"></i>
+                <span class="link-name toggle">Teaching</span>
+            </a>
+            <div id="toggle-group">
+                <a href="../html/faculty-resources.html" class="link visible">
+                    <i class="fa-solid fa-book"></i>
+                    <span class="link-name">Resources</span>
+                </a>
+                <a href="../html/faculty-submissions.html" class="link visible active">
+                    <i class="fa-solid fa-folder"></i>
+                    <span class="link-name">Submissions</span>
+                </a>
+                <a href="../html/webdev.html" class="link visible">
+                    <!--<img width="24" height="24" src="#" alt="home"/>-->
+                    <i class="fa-solid fa-circle"></i>
+                    <div class="class-info">
+                        <span class="link-name">Web Design Development</span>
+                        <span class="link-class">BSAIS 2-1</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="navbar-group">
+            <a href="#" class="link" id="dropdown-1">
+                <i class="fa-solid fa-archive"></i>
+                <span class="link-name">Archived Classes</span>
+            </a>
+            <a href="#" class="link" id="dropdown-1">
+                <i class="fa-solid fa-gear"></i>
+                <span class="link-name">Settings</span>
+            </a>
+        </div>
+    </aside>
+    <!--main content-->
+    <main>
+        <nav>
+            <a href="../html/faculty-submissions.html" class="link active-1">To review</a>
+            <a href="" class="link">Reviewed</a>
+        </nav>
+    
+        <div class="main-container">
+            <select name="Classes" id="classes" autofocus class="dropdown-class">
+                <option value="all">--all classes--</option>
+                <option value="webdev">Web Design Development</option>
+                <option value="aat">Advance Airline Ticketing</option>
+                <option value="saad">System Analysis and Design</option>
+            </select>
+
+            <div class="no-due">
+                <h2>No due submissions</h2>
+            </div>
+            <div class="in-progress">
+                <h2>In progress</h2>
+                <div class="task">
+                    <img src="../static/icons8-question-64.png" width="50" height="50" alt="q">
+                    <div class="task-info">
+                        <span class="task-name">Question</span>
+                        <span class="task-desc">Web Design Development | due 10 Jun</span>
+                    </div>
+                    <div class="task-meta">
+                        <span>0</span>
+                        <span>submitted</span>
+                    </div>
+                    <div class="task-meta">
+                        <span>0</span>
+                        <span>marked</span>
+                    </div>
+                    <div class="opt">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="../js/navbar.js"></script>
+</body>
+</html>
