@@ -144,15 +144,13 @@ main {
     text-decoration: none;
 }
 .subject-card {
-    background: var(--background-color);
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-    width: 200px;
+    background-image: url(../static/bg-class.jpg);
+    background-size: cover;
+    border-radius: 10px 10px 0 0;
     display: flex;
-    flex-direction: column;
+    margin: -1rem;
     padding: 1rem;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
+    flex-direction: column;
 }
 #toggle-group
 {
@@ -162,7 +160,7 @@ main {
 {
     display: block;
 }
-.subject-card:hover {
+.sub-img:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
@@ -172,10 +170,25 @@ main {
     flex-direction: column;
     padding-bottom: 12px;
 }
+.subid, .professor
+{
+    text-align: left;
+    color: #dbdbdb;
+    font-size: 12px;
+}
+.sub-img
+{
+    background: var(--background-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    padding: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
 .subject-title {
     font-size: 1.25rem;
     margin-bottom: 0.5rem;
-    color: #333;
+    color: #ffffff;
+    font-weight: 500;
 }
 
 .yrsec {
@@ -220,8 +233,9 @@ nav a
 }
 .sub-info
 {
-    margin-top: 230px;
-    line-height: 35px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 210px;
 }
 .stream-container
 {
@@ -234,7 +248,7 @@ nav a
 }
 .subject
 {
-    width: 60%;
+    width: 1000px;
     display: flex;
     flex-direction: column;
     border-radius: 12px;
@@ -242,7 +256,7 @@ nav a
     background-size: cover;
     background-repeat: no-repeat;
     margin-top: 50px;
-    height: 300px;
+    height: 275px;
     color: #fff;
     padding: 15px;
     box-shadow: 0 2px 5px var(--shadow-color);
@@ -271,7 +285,7 @@ nav a
 {
     padding: 15px;
     background-color: var(--background-color);
-    border-radius: 10px;
+    border-radius: 6px;
     border: 1px solid var(--border-color);
     box-shadow: 0 2px 5px var(--shadow-color);
 }
@@ -312,6 +326,10 @@ nav a
     object-fit: cover;
     border: 1px solid var(--border-color);
 }
+.post-time
+{
+    font-size: 14px;
+}
 .main-container
 {
     margin-top: 50px;
@@ -344,6 +362,10 @@ nav a
     flex-direction: column;
     margin-left: 15px;
 }
+.code
+{
+    color: rgb(75, 156, 72);
+}
 .task-meta
 {
     display: flex;
@@ -355,4 +377,32 @@ nav a
     margin-left: 20px;
     font-size: 25px;
     cursor: pointer;
+}
+.act-meta
+{
+    text-align: left;
+    font-size: 14px;
+    margin-top: 1.5rem;
+    padding-bottom: 5px;
+}
+.act-dl
+{
+    color: #858585;
+}
+.act-title
+{
+    padding: 10px;
+}
+.op
+{
+    font-weight: 500;
+}
+.link-announcement
+{
+    text-decoration: none;
+    color: #000000;
+}
+.announcement:hover
+{
+
 }
