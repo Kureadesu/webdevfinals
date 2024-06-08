@@ -39,20 +39,20 @@
                 <span class="link-name toggle">Teaching</span>
             </a>
             <div id="toggle-group">
-                <a href="#" class="link visible">
+                <a href="../html/faculty-resources.html" class="link visible">
                     <i class="fa-solid fa-book"></i>
                     <span class="link-name">Resources</span>
                 </a>
-                <a href="#" class="link visible">
+                <a href="../html/faculty-submissions.html" class="link visible">
                     <i class="fa-solid fa-folder"></i>
                     <span class="link-name">Submissions</span>
                 </a>
-                <a href="#" class="link visible">
+                <a href="#" class="link visible active">
                     <!--<img width="24" height="24" src="#" alt="home"/>-->
                     <i class="fa-solid fa-circle"></i>
                     <div class="class-info">
-                        <span class="link-name">Class 1</span>
-                        <span class="link-class">Section</span>
+                        <span class="link-name">Web Design Development</span>
+                        <span class="link-class">BSAIS 2-1</span>
                     </div>
                 </a>
             </div>
@@ -75,8 +75,40 @@
             <a href="../html/webdev-classwork.html" class="link active-1">Classwork</a>
             <a href="../html/webdev-people.html" class="link">People</a>
             <a href="../html/webdev-grades.html" class="link">Grades</a>
+            <a href="../html/faculty-attendance.html" class="link">Attendance</a>
         </nav>
 
+        <div class="main-container">
+            <select name="topic" id="topic" autofocus class="dropdown-class">
+                <option value="all">All Topics</option>
+                <optgroup label="Topic 1">
+                    <option value="Question">Exam</option>
+                </optgroup>
+            </select>
+
+            <div class="topic-1">
+                <div class="topic-meta">
+                    <h2>Topic 1</h2>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+                
+                <div class="task">
+                    <div class="task-info">
+                        <img src="../static/icons8-quiz-50.png" width="50" height="50" alt="q">
+                        <span class="task-name">Final project presentation</span>
+                    </div>
+                    <div class="task-meta">
+                        <span class="task-type">exam</span>
+                    </div>
+                    <div class="task-meta">
+                        <span class="deadline">due 10 Jun, 1:00 pm</span>
+                    </div>
+                    <div class="opt">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <script src="../js/navbar.js"></script>
 </body>
