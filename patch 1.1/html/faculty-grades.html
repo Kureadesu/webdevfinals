@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources | ActTrack</title>
+    <link rel="stylesheet" href="../css/faculty.css">
+    <link rel="stylesheet" href="../misc/all.min.css">
+    <link rel="stylesheet" href="../misc/fontawesome.min.css">
+    <link rel="stylesheet" href="../misc/fonts.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <a href="../html/faculty-dashboard.html">
+            <img src="../static/logo-transparent.png" width="50" height="50" alt="logo">
+            <span class="logo-name">ActTrack</span></a>
+        </div>
+        <div class="header-right">
+            <i class="fa-solid fa-plus" style="font-size: 25px;"></i>
+            <img src="../static/tristan.png" width="50" height="50" alt="pfp">
+            <a href="/profile/html/login.html" style="color: red; text-decoration: none;"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+        </div>
+    </header>
+
+    <aside class="navbar open">
+        <div class="navbar-group">
+            <a href="../html/faculty-dashboard.html" class="link">
+                <i class="fa-solid fa-house"></i>
+                <span class="link-name">Home</span>
+            </a>
+           
+        </div>
+        <div class="navbar-group">
+            <a href="#" class="link" id="dropdown-1">
+                <i class="fa-solid fa-chalkboard-user"></i>
+                <span class="link-name toggle">Teaching</span>
+            </a>
+            <div id="toggle-group">
+                <a href="../html/faculty-grades.html" class="link visible active">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span class="link-name">Records</span>
+                </a>
+                <a href="./faculty-submissions.html" class="link visible">
+                    <i class="fa-solid fa-folder"></i>
+                    <span class="link-name">Submissions</span>
+                </a>
+                <a href="../html/webdev.html" class="link visible">
+                    <!--<img width="24" height="24" src="#" alt="home"/>-->
+                    <i class="fa-solid fa-circle"></i>
+                    <div class="class-info">
+                        <span class="link-name">Web Design Development</span>
+                        <span class="link-class">BSAIS 2-1</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="navbar-group">
+            
+            <a href="/profile/html/profile-faculty.html" class="link" id="dropdown-1">
+                <i class="fa-solid fa-gear"></i>
+                <span class="link-name">Settings</span>
+            </a>
+        </div>
+    </aside>
+    <!--main content-->
+    <main>
+        <div class="main-container">
+            <section class="card">
+                <div class="title-container">
+                    <h2>Web Design Development</h2>
+                    <button class="class-list-btn" onclick="toggleClassList(1)">view class list</button>
+                </div>
+                <table id="class-list-table-1" class="class-list-table hidden visible grades">
+                    <thead>
+                        <tr>
+                            <th>Student ID</th>
+                            <th>Name</th>
+                            <th>Course/Section</th>
+                            <th>Quiz 1</th>
+                            <th>PS</th>
+                            <th>Quiz 2</th>
+                            <th>PS</th>
+                            <th>Quiz 3</th>
+                            <th>PS</th>
+                            <th>Recitation</th>
+                            <th>PS</th>
+                            <th>Project</th>
+                            <th>PS</th>
+                            <th>Exam</th>
+                            <th>PS</th>
+                            <th>Grade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Add student data here -->
+                        <tr align="center">
+                            <td>12223MN-000540</td>
+                            <td>Balaba, Claire Angeli J.</td>
+                            <td>BSAIS 2-1</td>
+                            <td><input type="text" value="" name="quiz_1" class="quiz-1 rec-input"></td>
+                            <td><b>
+                                10</b></td>
+                            <td><input type="text" value="" name="quiz_2" class="quiz-2 rec-input"></td>
+                            <td><b>
+                                10</b></td>
+                            <td><input type="text" value="" name="quiz_3" class="quiz-3 rec-input"></td>
+                            <td><b>
+                                10</b></td>
+                            <td><input type="text" value="" name="recit" class="recit rec-input"></td>
+                            <td><b>
+                                100</b></td>
+                            <td><input type="text" value="" name="proj" class="proj rec-input"></td>
+                            <td><b>
+                                10</b></td>
+                            <td><input type="text" value="" name="exam" class="exam rec-input"></td>
+                            <td><b>
+                                100</b></td>
+                            <td><b id="gwa"></b></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <br>
+            
+            <br>
+            <button class="class-list-btn trigger" onclick="location.href='/patch 1.1/html/faculty-dashboard.html'">
+                Back to Dashboard
+            </button>
+        </div>
+    </main>
+    <script src="/patch 1.1/js/class_record.js"></script>
+    <script src="/profile/js/classlist.js"></script>
+    <script src="../js/navbar.js"></script>
+</body>
+</html>

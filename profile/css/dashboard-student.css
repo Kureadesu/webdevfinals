@@ -15,7 +15,7 @@
 
 body
 {
-    background: #7C9F6F;
+    background: var(--primary-color);
 }
 
 header {
@@ -33,6 +33,12 @@ header h1{
     float:left;
     padding-right: 60px;
     color: #7C9F6F;
+}
+
+.top-nav
+{
+    display: flex;
+    justify-content: space-between;
 }
 
 header div{
@@ -205,8 +211,8 @@ li
 }
 
 main{
-    display:block;
-    float: left;
+    display: flex;
+    justify-content: center;
     transition: margin-left 0.3s ease;
     padding-top: 75px;
 }

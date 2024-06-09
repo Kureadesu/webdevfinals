@@ -684,3 +684,19 @@ color: white;
     text-transform: capitalize;
     font-size: 15px;
 }
+
+.hidden
+{
+    display: none;
+}
+section
+{
+    width: 80%;
+}
+.trigger
+{
+    background-color: #dfdfdf;
+    color: green;
+    padding: 10px 15px;
+    font-weight: 500;
+}

@@ -4,64 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Activity | ActTrack</title>
-    <link rel="stylesheet" href="../css/faculty.css">
     <link rel="stylesheet" href="../misc/all.min.css">
     <link rel="stylesheet" href="../misc/fontawesome.min.css">
     <link rel="stylesheet" href="../misc/fonts.css">
     <link rel="shortcut icon" href="/patch 1.1/static/logo-transparent.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/dashboard-student.css">
+    <link rel="stylesheet" href="/patch 1.1/css/student.css">
 </head>
 <body>
-    <header>
+    <input type="checkbox" id="menuToggle" class="menu-toggle">
+    <header class="top-nav">
         <div class="header-left">
-            <a href="../html/faculty-dashboard.html">
-            <img src="../static/logo-transparent.png" width="50" height="50" alt="logo">
-            <span class="logo-name">ActTrack</span></a>
+            <label for="menuToggle" class="menu-button"><i class="fa-solid fa-bars"></i></label>
+            <a href="../html/dashboard-student.html"><h1>ActTrack</h1></a>
         </div>
         <div class="header-right">
             <i class="fa-solid fa-plus" style="font-size: 25px;"></i>
-            <img src="../static/tristan.png" width="50" height="50" alt="pfp">
+            <img src="/patch 1.1/static/tristan.png" width="50" height="50" alt="pfp">
             <a href="/profile/html/login.html" style="color: red; text-decoration: none;"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
         </div>
     </header>
-
-    <aside class="navbar open">
-        <div class="navbar-group">
-            <a href="../html/faculty-dashboard.html" class="link">
-                <i class="fa-solid fa-house"></i>
-                <span class="link-name">Home</span>
-            </a>
-        </div>
-        <div class="navbar-group">
-            <a href="#" class="link" id="dropdown-1">
-                <i class="fa-solid fa-chalkboard-user"></i>
-                <span class="link-name toggle">Teaching</span>
-            </a>
-            <div id="toggle-group">
-                <a href="../html/faculty-grades.html" class="link visible">
-                    <i class="fa-solid fa-chart-line"></i>
-                    <span class="link-name">Records</span>
-                </a>
-                <a href="./faculty-submissions.htmls" class="link visible active">
-                    <i class="fa-solid fa-folder"></i>
-                    <span class="link-name">Submissions</span>
-                </a>
-                <a href="../html/webdev.html" class="link visible">
-                    <!--<img width="24" height="24" src="#" alt="home"/>-->
-                    <i class="fa-solid fa-circle"></i>
-                    <div class="class-info">
-                        <span class="link-name">Web Design Development</span>
-                        <span class="link-class">BSAIS 2-1</span>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="navbar-group">
-            
-            <a href="#" class="link" id="dropdown-1">
-                <i class="fa-solid fa-gear"></i>
-                <span class="link-name">Settings</span>
-            </a>
-        </div>
+    <aside class="aside-menu">
+        <nav>
+            <ul>
+                <li><a href="../html/dashboard-student.html" class="active"><i class="fa-solid fa-house"></i>Dashboard</a></li>
+                <li><a href="/profile/html/view-grades.html"><i class="fa-solid fa-ranking-star"></i>Grades</a></li>
+                <li><a href="../html/profile.html"><i class="fa-solid fa-user"></i>Profile</a></li>
+            </ul>
+        </nav>
+        
+        <nav>
+            <ul>
+                <li><a href="/profile/html/login.html" style="color: red;"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </nav>
     </aside>
     <!--main content-->
     <main>
@@ -73,13 +52,12 @@
         </nav>
         
         <div class="main-container">
-            <br>
             <div class="card">
                 <div class="base">
                     <div class="left">
-                        <img src="../static/icons8-exam-40.png" alt="">
+                        <img src="/patch 1.1/static/icons8-exam-40.png" alt="">
                     </div>
-                    
+
                     <div class="card-R">
                         <!--task container-->
                         <div class="right">
@@ -106,7 +84,7 @@
                             <span>class comments</span>
                         </div>
                         <div class="box">
-                            <img src="../static/tristan.png" width="50" height="50" alt="pfp" style="border-radius: 50%; border: 1px solid gray;">
+                            <img src="/patch 1.1/static/tristan.png" width="50" height="50" alt="pfp" style="border-radius: 50%; border: 1px solid gray;">
                             <div class="input-box">
                                 <input type="text" placeholder="add comment..." id="comment" name="comment">
                                 <input type="submit" value="comment">
@@ -115,8 +93,20 @@
                     </div>
                 </div>
             </div>
+            <div class="card">
+                <div class=" container">
+                    <h2>File Upload</h2>
+                    <form id="uploadForm" enctype="multipart/form-data">
+                        <input type="file" id="fileInput" name="file" required>
+                        <br><br>
+                        <button id="submitButton" type="submit">Submit</button>
+                        <button id="unsubmitButton" class="hidden" type="button">Unsubmit</button>
+                    </form>
+                    <p id="confirmationMessage" class="hidden">You have handed in the task!</p>
+                </div>
+            </div>
         </div>
     </main>
-    <script src="../js/navbar.js"></script>
+    <script src="/patch 1.1/js/file-upload.js"></script>
 </body>
 </html>

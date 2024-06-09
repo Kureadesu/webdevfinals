@@ -34,6 +34,25 @@ header h1{
     color: #7C9F6F;
 }
 
+.top-nav
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-right
+{
+    padding-right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+.header-right img
+{
+    border-radius: 50%;
+    border: 1px solid gray;
+}
+
 .topnav{
     padding-left: 50px;
 }
@@ -56,6 +75,7 @@ header h1{
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
+    margin-top: 100px;
 }
 
 .card {
@@ -63,6 +83,7 @@ header h1{
     padding: 20px;
     margin: 20px;
     width: 90%;
+    border-radius: 10px;
     border: 1px solid var(--border-color);
     box-shadow: 0 0 10px var(--shadow-color);
 }
@@ -78,17 +99,18 @@ header h1{
 
 .class-list-btn {
     cursor: pointer;
-    background-color: var(--primary-color);
-    color: var(--background-color);
+    background-color: rgb(169, 243, 73);
+    color: black;
     border: none;
-    padding: 5px 10px;
+    font-weight: 500;
+    padding: 10px 15px;
     border-radius: 5px;
     text-transform: capitalize;
     font-size: 15px;
 }
 
 .class-list-btn:hover {
-    background-color: #45a049;
+    background-color: rgb(196, 248, 137);
 }
 
 .class-list-table {
@@ -111,4 +133,10 @@ header h1{
 
 .hidden {
     display: none;
+}
+
+.rec-input
+{
+    width: 50px;
+    height: 30px;
 }

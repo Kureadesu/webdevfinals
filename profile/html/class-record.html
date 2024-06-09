@@ -8,25 +8,47 @@
     <link rel="stylesheet" href="../misc/fontawesome.min.css">
     <link rel="stylesheet" href="../misc/fonts.css">
     <link rel="stylesheet" href="../css/record.css">
+    <link rel="stylesheet" href="../css/dashboard-student.css">
+    <link rel="shortcut icon" href="/patch 1.1/static/logo-transparent.png" type="image/x-icon">
 </head>
 <body>
-    <header>
-        <a href="../html/dashboard.html">
-            <h1>ActTrack</h1>
-        </a>
-        <nav class="topnav">
-            <a href="../html/profile-faculty.html">Profile</a>
-        </nav>
+    <input type="checkbox" id="menuToggle" class="menu-toggle">
+    <header class="top-nav">
+        <div class="header-left">
+            <label for="menuToggle" class="menu-button"><i class="fa-solid fa-bars"></i></label>
+            <a href="../html/dashboard-student.html"></a><h1>ActTrack</h1></a>
+        </div>
+        <div class="header-right">
+            <i class="fa-solid fa-plus" style="font-size: 25px;"></i>
+            <img src="/patch 1.1/static/tristan.png" width="50" height="50" alt="pfp">
+            <a href="/profile/html/login.html" style="color: red; text-decoration: none;"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+        </div>
     </header>
-    <br>
-    <h1 align="center">Class Record</h1>
+    <aside class="aside-menu">
+        <nav>
+            <ul>
+                <li><a href="/profile/html/dashboard-student.html"><i class="fa-solid fa-house"></i>Dashboard</a></li>
+                <li><a href="/profile/html/view-grades.html"><i class="fa-solid fa-ranking-star"></i>Grades</a></li>
+                <li><a href="/profile/html/profile.html"><i class="fa-solid fa-user"></i>Profile</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <ul>
+                <li><a href="/profile/html/login.html" style="color: red;"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </nav>
+    </aside>
+    
     <main class="main-container">
         <section class="card">
             <div class="title-container">
                 <h2>Web Design Development</h2>
                 <button class="class-list-btn" onclick="toggleClassList(1)">view class list</button>
             </div>
-            <table id="class-list-table-1" class="class-list-table hidden visible">
+            <table id="class-list-table-1" class="class-list-table hidden visible grades">
                 <thead>
                     <tr>
                         <th>Student ID</th>
@@ -53,125 +75,35 @@
                         <td>12223MN-000540</td>
                         <td>Balaba, Claire Angeli J.</td>
                         <td>BSAIS 2-1</td>
-                        <td>10</td>
+                        <td><input type="text" value="" name="quiz_1" class="quiz-1 rec-input"></td>
                         <td><b>
                             10</b></td>
-                        <td>10</td>
+                        <td><input type="text" value="" name="quiz_2" class="quiz-2 rec-input"></td>
                         <td><b>
                             10</b></td>
-                        <td>10</td>
+                        <td><input type="text" value="" name="quiz_3" class="quiz-3 rec-input"></td>
                         <td><b>
                             10</b></td>
-                        <td>100</td>
+                        <td><input type="text" value="" name="recit" class="recit rec-input"></td>
                         <td><b>
                             100</b></td>
-                        <td>10</td>
+                        <td><input type="text" value="" name="proj" class="proj rec-input"></td>
                         <td><b>
                             10</b></td>
-                        <td>100</td>
+                        <td><input type="text" value="" name="exam" class="exam rec-input"></td>
                         <td><b>
                             100</b></td>
-                        <td></td>
+                        <td><b id="gwa"></b></td>
                     </tr>
                 </tbody>
             </table>
         </section>
-        <section class="card">
-            <div class="title-container">
-                <h2>System Analysis and Design</h2>
-                <button class="class-list-btn" onclick="toggleClassList(2)">view class list</button>
-            </div>
-            <table id="class-list-table-2" class="class-list-table hidden">
-                <thead>
-                    <tr>
-                        <th>Student ID</th>
-                        <th>Name</th>
-                        <th>Course/Section</th>
-                        <th>Quiz 1</th>
-                        <th>PS</th>
-                        <th>Quiz 2</th>
-                        <th>PS</th>
-                        <th>Quiz 3</th>
-                        <th>PS</th>
-                        <th>Recitation</th>
-                        <th>PS</th>
-                        <th>Project</th>
-                        <th>PS</th>
-                        <th>Exam</th>
-                        <th>PS</th>
-                        <th>Grade</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Add student data here -->
-                    <tr>
-                        <td>12223MN-000540</td>
-                        <td>Balaba, Claire Angeli J.</td>
-                        <td>BSAIS 2-1</td>
-                    </tr>
-                    <tr>
-                        <td>12223MN-000540</td>
-                        <td>Balaba, Claire Angeli J.</td>
-                        <td>BSAIS 2-1</td>
-                    </tr>
-                    <tr>
-                        <td>12223MN-000540</td>
-                        <td>Balaba, Claire Angeli J.</td>
-                        <td>BSAIS 2-1</td>
-                    </tr>
-                    <tr>
-                        <td>12223MN-000540</td>
-                        <td>Balaba, Claire Angeli J.</td>
-                        <td>BSAIS 2-1</td>
-                    </tr>
-                    <tr>
-                        <td>12223MN-000540</td>
-                        <td>Balaba, Claire Angeli J.</td>
-                        <td>BSAIS 2-1</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-        <section class="card">
-            <div class="title-container">
-                <h2>Advance Airline Ticketing</h2>
-                <button class="class-list-btn" onclick="toggleClassList(3)">view class list</button>
-            </div>
-            <table id="class-list-table-3" class="class-list-table hidden">
-                <thead>
-                    <tr>
-                        <th>Student ID</th>
-                        <th>Name</th>
-                        <th>Course/Section</th>
-                        <th>Quiz 1</th>
-                        <th>PS</th>
-                        <th>Quiz 2</th>
-                        <th>PS</th>
-                        <th>Quiz 3</th>
-                        <th>PS</th>
-                        <th>Recitation</th>
-                        <th>PS</th>
-                        <th>Project</th>
-                        <th>PS</th>
-                        <th>Exam</th>
-                        <th>PS</th>
-                        <th>Grade</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Add student data here -->
-                    <tr>
-                        <td>12223MN-000540</td>
-                        <td>Balaba, Claire Angeli J.</td>
-                        <td>BSAIS 2-1</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+        
         <button class="class-list-btn" onclick="location.href='dashboard.html'">
             Back to Dashboard
         </button>
     </main>
+    <script src="/patch 1.1/js/class_record.js"></script>
     <script src="../js/classlist.js"></script>
 </body>
 </html>

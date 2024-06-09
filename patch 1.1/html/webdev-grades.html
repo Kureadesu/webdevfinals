@@ -100,32 +100,18 @@
                             <td>12223MN-000540</td>
                             <td>Balaba, Claire Angeli J.</td>
                             <td>BSAIS 2-1</td>
-                            <td><input type="text" name="prelim_grade" value="85" min="0" max="100" required></td>
-                            <td><input type="text" name="midterm_grade" value="90" min="0" max="100" required></td>
-                            <td><input type="text" name="final_grade" value="92" min="0" max="100" required></td>
+                            <td><input type="text" name="prelim_grade" value="" min="0" max="100" required></td>
+                            <td><input type="text" name="midterm_grade" value="" min="0" max="100" required></td>
+                            <td><input type="text" name="final_grade" value="" min="0" max="100" required></td>
                             <td><b id="gwa">89.33</b></td>
                         </tr>
-                        <tr>
-                            <td>AIS223</td>
-                            <td>Advance Airline Ticketing</td>
-                            <td>Caguia, Cielito M.</td>
-                            <td><input type="text" name="prelim_grade" value="80" min="0" max="100" required></td>
-                            <td><input type="text" name="midterm_grade" value="85" min="0" max="100" required></td>
-                            <td><input type="text" name="final_grade" value="90" min="0" max="100" required></td>
-                            <td><b id="gwa">85.00</b></td>
-                        </tr>
-                        <tr>
-                            <td>IS222</td>
-                            <td>System Analysis and Design</td>
-                            <td>Dasalla, Jerum B.</td>
-                            <td><input type="text" name="prelim_grade" value="86" min="0" max="100" required></td>
-                            <td><input type="text" name="midterm_grade" value="90" min="0" max="100" required></td>
-                            <td><input type="text" name="final_grade" value="94" min="0" max="100" required></td>
-                            <td><b id="gwa">90.00</b></td>
-                        </tr>
+                        <!--function to save input value -->
                     </tbody>
                 </table>
                 <br>
+                <button class="class-list-btn" onclick="saveInputValue()">
+                    Save
+                </button>
                 <button class="class-list-btn" onclick="location.href = '/patch 1.1/html/webdev.html'">
                     Back to Dashboard
                 </button>

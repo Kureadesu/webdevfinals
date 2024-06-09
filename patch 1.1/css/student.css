@@ -1,0 +1,269 @@
+.stream-container
+{
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    margin-left: 250px;
+}
+.stream-nav
+{
+    position: fixed;
+    background-color: #fff;
+    height: 50px;
+    border-bottom: 1px solid var(--border-color);
+    margin-left: 1px;
+    margin-top: 24px;
+    width: 100%;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    padding: 0 25px;
+}
+nav a
+{
+    text-decoration: none;
+}
+.active-1
+{
+    font-weight: 500;
+    border-bottom: 3px solid;
+}
+.subject
+{
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    background-image: url(../static/bg-class.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 50px;
+    height: 285px;
+    color: #fff;
+    padding: 15px;
+    box-shadow: 0 2px 5px var(--shadow-color);
+}
+.sub-container
+{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+}
+.sub-left
+{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.sub-right
+{
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    gap: 15px;
+}
+.card
+{
+    padding: 15px;
+    background-color: var(--background-color);
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 5px var(--shadow-color);
+}
+.base
+{
+    display: flex;
+    gap: 1rem;
+}
+.right
+{
+    width: 500px;
+    border-bottom: 1px solid gray;
+}
+.card-R
+{
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.box
+{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.input-box
+{
+    border-radius: 10px;
+    border: 2px solid var(--border-color);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+.input-box input[type=text]
+{
+    border: none;
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 14px;
+}
+.input-box input[type=text]:focus
+{
+    border: none;
+}
+.input-box input[type=submit]
+{
+    border: none;
+    text-align: right;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.main-container
+{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.sub-info
+{
+    display: flex;
+    flex-direction: column;
+    margin-top: 210px;
+}
+.post 
+{
+    display: flex;
+}
+.post #stream-announcement
+{
+    width: 100%;
+    background: transparent;
+    border: transparent;
+    padding-left: 10px;
+}
+.post #submit-btn
+{
+    background: transparent;
+    border: transparent;
+    color: rgb(255, 255, 255);
+}
+.class-meta .record:hover, .folder:hover, .settings:hover
+{
+    background-color: rgba(128, 128, 128, 0.123);
+    border-radius: 50%;
+}
+.post-meta
+{
+    display: flex;
+    justify-content: space-between;
+}
+.post-img
+{
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--border-color);
+}
+.post-time
+{
+    font-size: 14px;
+}
+.link-announcement
+{
+    text-decoration: none;
+    color: #000000;
+}
+.announcement:hover
+{
+    background-color: #f0f0f0;  
+}
+.topic-meta
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    font-size: 22px;
+}
+.topic-meta h2
+{
+    font-weight: 400;
+}
+.op
+{
+    font-weight: 500;
+}
+.header-left
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.header-left a
+{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.header-right
+{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-right: 50px;
+}
+.header-right img
+{
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--border-color);
+}
+
+.container {
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+input[type="file"] {    
+    width: 200px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+button:hover {
+    background-color: #218838;
+}
+#confirmationMessage {
+    margin-top: 20px;
+    color: #28a745;
+    font-weight: bold;
+}
+.hidden {
+    display: none;
+}
