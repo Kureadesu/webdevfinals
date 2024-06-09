@@ -30,10 +30,6 @@
                 <i class="fa-solid fa-house"></i>
                 <span class="link-name">Home</span>
             </a>
-            <a href="#" class="link">
-                <i class="fa-solid fa-calendar"></i>
-                <span class="link-name">Calendar</span>
-            </a>
         </div>
         <div class="navbar-group">
             <a href="#" class="link" id="dropdown-1">
@@ -74,7 +70,9 @@
     <main>
         <nav>
             <a href="../html/activity1-webdev.html" class="link active-1">Instructions</a>
-            <a href="../html/webdev-classwork.html" class="link">Student Submissions</a>
+            <!--
+            <a href="../html/webdev-act1-submissions.html" class="link">Student Submissions</a>
+            -->
         </nav>
         
         <div class="main-container">
@@ -86,6 +84,7 @@
                     </div>
                     
                     <div class="card-R">
+                        <!--task container-->
                         <div class="right">
                             <div style="display: flex; justify-content: space-between; align-items: center;">
                                 <h1>Final Project Presentation</h1>
@@ -93,20 +92,21 @@
                             </div>
                             <span>Sheryl Ann B. Ricafort • May 21, 8:30 am</span>
                             <div style="display: flex; justify-content: space-between; align-items: center;">
-                                <div style="display: flex; flex-direction: column; color: gray; font-size: 15px; padding-top: 10px;">
+                                <div class="task-desc" style="display: flex; flex-direction: column;">
+                                    <br>
                                     <span>exam</span>
                                     <span>100 points</span>
+                                    <br>
                                 </div>
-                                <span>due 10 June, 1:00 pm</span>
+                                <span class="task-desc">due 10 June, 1:00 pm</span>
                             </div>
                         </div>
-                        <div style="padding-top: 10px; padding-bottom: 10px;">
-                            <span>description</span>
-                            <hr noshade color="lightgray">
-                            <div style="padding-top: 10px;">
-                                <i class="fa-solid fa-user-group"></i>
-                                <span>class comments</span>
-                            </div>
+                        <div style="padding-top: 10px; padding-bottom: 10px; border-bottom: 1px solid #ddd;">
+                            <span class="task-instructions">description</span>
+                        </div>
+                        <div style="padding: 10px;">
+                            <i class="fa-solid fa-user-group"></i>
+                            <span>class comments</span>
                         </div>
                         <div class="box">
                             <img src="../static/tristan.png" width="50" height="50" alt="pfp" style="border-radius: 50%; border: 1px solid gray;">

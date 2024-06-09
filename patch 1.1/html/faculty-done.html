@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resources | ActTrack</title>
+    <title>Submissions | ActTrack</title>
     <link rel="stylesheet" href="../css/faculty.css">
     <link rel="stylesheet" href="../misc/all.min.css">
     <link rel="stylesheet" href="../misc/fontawesome.min.css">
@@ -44,11 +44,11 @@
                     <i class="fa-solid fa-book"></i>
                     <span class="link-name">Resources</span>
                 </a>
-                <a href="./faculty-submissions.html" class="link visible">
+                <a href="../html/faculty-submissions.html" class="link visible active">
                     <i class="fa-solid fa-folder"></i>
                     <span class="link-name">Submissions</span>
                 </a>
-                <a href="../html/webdev.html" class="link visible active">
+                <a href="../html/webdev.html" class="link visible">
                     <!--<img width="24" height="24" src="#" alt="home"/>-->
                     <i class="fa-solid fa-circle"></i>
                     <div class="class-info">
@@ -72,41 +72,44 @@
     <!--main content-->
     <main>
         <nav>
-            <a href="../html/webdev.html" class="link ">Stream</a>
-            <a href="../html/webdev-classwork.html" class="link">Classwork</a>
-            <a href="../html/webdev-people.html" class="link">People</a>
-            <a href="../html/webdev-grades.html" class="link">Grades</a>
-            <a href="../html/faculty-attendance.html" class="link active-1">Attendance</a>
+            <a href="../html/faculty-submissions.html" class="link ">To review</a>
+            <a href="../html/faculty-done.html" class="link active-1">Reviewed</a>
         </nav>
-
+    
         <div class="main-container">
-            <div class="studentData">
-                <form action="" id="form1">
-                  <input type="text" placeholder="Name" id="name" required>
-                  <!-- <input type="text" placeholder="Hour" id="hour" required>
-                  <input type="text" placeholder="Subject" id="subject" required> -->
-                  <input type="text" placeholder="Student Number" id="rollNo" required>
-                  <input type="submit" class="btn">
-                </form>
-              </div>
-              <table>
-                <thead>
-                  <tr>
-                    <th>id</th>
-                    <th>Name</th>
-                    <!-- <th>Hour</th>
-                    <th>Subject</th> -->
-                    <th>Student No.</th>
-                    <th>Attendence</th>
-                  </tr>
-                </thead>
-                <tbody id="tbody">
-            
-                </tbody>
-              </table>
+            <select name="Classes" id="classes" autofocus class="dropdown-class">
+                <option value="all">--all classes--</option>
+                <option value="webdev">Web Design Development</option>
+                <option value="aat">Advance Airline Ticketing</option>
+                <option value="saad">System Analysis and Design</option>
+            </select>
+
+            <div class="in-progress">
+                <br>
+                <h2>No reviewed work yet</h2>
+                <!--
+                <div class="task">
+                    <img src="../static/icons8-question-64.png" width="50" height="50" alt="q">
+                    <div class="task-info">
+                        <span class="task-name">Question</span>
+                        <span class="task-desc">Web Design Development | due 10 Jun</span>
+                    </div>
+                    <div class="task-meta">
+                        <span>0</span>
+                        <span>submitted</span>
+                    </div>
+                    <div class="task-meta">
+                        <span>0</span>
+                        <span>marked</span>
+                    </div>
+                    <div class="opt">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+                -->
+            </div>
         </div>
     </main>
-    <script src="../js/attendance.js"></script>
     <script src="../js/navbar.js"></script>
 </body>
 </html>
