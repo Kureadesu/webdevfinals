@@ -15,7 +15,7 @@
 
 body
 {
-    background: #7C9F6F;
+    background: var(--primary-color);
 }
 
 header {
@@ -32,7 +32,7 @@ header h1{
     padding-left: 55px;
     float:left;
     padding-right: 60px;
-    color: #7C9F6F;
+    color: var(--primary-color);
 }
 
 header div{
@@ -49,11 +49,6 @@ header i{
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 }
-
-
-
-
-
 
 .menu-toggle {
     display: none;
@@ -127,14 +122,9 @@ header i{
     border-bottom: solid 1px #CCD1D1;
 }
 
-
-
-
-
-
 main {
-    display:block;
-    float: left;
+    display: flex;
+    margin-left: 250px;
     padding-top: 75px;
     transition: margin-left 0.3s ease;
 }
@@ -146,7 +136,6 @@ main {
 .card {
     background-color: var(--background-color);
     padding: 20px;
-    margin: 20px;
     border: 1px solid #ddd;
     box-shadow: 0 0 10px var(--shadow-color);
     border-radius: 5px;
@@ -217,7 +206,7 @@ main {
 }
 
 .class-list-table th {
-    background-color: #7C9F6F;
+    background-color: var(--secondary-color);
     color: #fff;
 }
 
@@ -235,14 +224,22 @@ main {
     text-align: center;
 }
 
+.class-list-table td input
+{
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    font-size: 18px;
+}
+
 .class-list-table th {
-    background-color: #7C9F6F;
+    background-color: var(--secondary-color);
     color: #fff;
 }
 
 .class-list-btn {
     cursor: pointer;
-    background-color: #7C9F6F;
+    background-color: var(--secondary-color);
     color: #fff;
     border: none;
     padding: 5px 10px;

@@ -19,12 +19,13 @@
         <div class="header-right">
             <i class="fa-solid fa-plus" style="font-size: 25px;"></i>
             <img src="../static/tristan.png" width="50" height="50" alt="pfp">
+            <a href="/profile/html/login.html" style="color: red; text-decoration: none;"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
         </div>
     </header>
 
     <aside class="navbar open">
         <div class="navbar-group">
-            <a href="#" class="link">
+            <a href="../html/faculty-dashboard.html" class="link">
                 <i class="fa-solid fa-house"></i>
                 <span class="link-name">Home</span>
             </a>
@@ -47,7 +48,7 @@
                     <i class="fa-solid fa-folder"></i>
                     <span class="link-name">Submissions</span>
                 </a>
-                <a href="#" class="link visible active">
+                <a href="../html/webdev.html" class="link visible active">
                     <!--<img width="24" height="24" src="#" alt="home"/>-->
                     <i class="fa-solid fa-circle"></i>
                     <div class="class-info">
@@ -62,7 +63,7 @@
                 <i class="fa-solid fa-archive"></i>
                 <span class="link-name">Archived Classes</span>
             </a>
-            <a href="#" class="link" id="dropdown-1">
+            <a href="/profile/html/profile-faculty.html" class="link" id="dropdown-1">
                 <i class="fa-solid fa-gear"></i>
                 <span class="link-name">Settings</span>
             </a>
@@ -92,7 +93,7 @@
                     <i class="fa-solid fa-ellipsis-vertical"></i>
                 </div>
                 
-                <div class="task">
+                <div class="task" onclick="location.href='/patch 1.1/html/activity1-webdev.html'">
                     <div class="task-info">
                         <img src="../static/icons8-quiz-50.png" width="50" height="50" alt="q">
                         <span class="task-name">Final project presentation</span>
@@ -107,8 +108,14 @@
                         <i class="fa-solid fa-ellipsis-vertical"></i>
                     </div>
                 </div>
+
             </div>
+            <br>
+            <button class="btn-create">
+                <i class="fa-solid fa-plus"></i> Create
+            </button>
         </div>
+        
     </main>
     <script src="../js/navbar.js"></script>
 </body>

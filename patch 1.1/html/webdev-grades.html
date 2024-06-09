@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Records | ActTrack</title>
     <link rel="stylesheet" href="../css/faculty.css">
+    <link rel="stylesheet" href="/profile/css/grades.css">
     <link rel="stylesheet" href="../misc/all.min.css">
     <link rel="stylesheet" href="../misc/fontawesome.min.css">
     <link rel="stylesheet" href="../misc/fonts.css">
@@ -19,12 +20,13 @@
         <div class="header-right">
             <i class="fa-solid fa-plus" style="font-size: 25px;"></i>
             <img src="../static/tristan.png" width="50" height="50" alt="pfp">
+            <a href="/profile/html/login.html" style="color: red; text-decoration: none;"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
         </div>
     </header>
 
     <aside class="navbar open">
         <div class="navbar-group">
-            <a href="#" class="link">
+            <a href="./faculty-dashboard.html" class="link">
                 <i class="fa-solid fa-house"></i>
                 <span class="link-name">Home</span>
             </a>
@@ -39,20 +41,20 @@
                 <span class="link-name toggle">Teaching</span>
             </a>
             <div id="toggle-group">
-                <a href="#" class="link visible">
+                <a href="./faculty-resources.html" class="link visible">
                     <i class="fa-solid fa-book"></i>
                     <span class="link-name">Resources</span>
                 </a>
-                <a href="#" class="link visible">
+                <a href="../html/faculty-submissions.html" class="link visible">
                     <i class="fa-solid fa-folder"></i>
                     <span class="link-name">Submissions</span>
                 </a>
-                <a href="#" class="link visible">
+                <a href="../html/webdev.html" class="link visible">
                     <!--<img width="24" height="24" src="#" alt="home"/>-->
                     <i class="fa-solid fa-circle"></i>
                     <div class="class-info">
-                        <span class="link-name">Class 1</span>
-                        <span class="link-class">Section</span>
+                        <span class="link-name">Web Design Development</span>
+                        <span class="link-class">BSAIS 2-1</span>
                     </div>
                 </a>
             </div>
@@ -62,7 +64,7 @@
                 <i class="fa-solid fa-archive"></i>
                 <span class="link-name">Archived Classes</span>
             </a>
-            <a href="#" class="link" id="dropdown-1">
+            <a href="/profile/html/profile-faculty.html" class="link" id="dropdown-1">
                 <i class="fa-solid fa-gear"></i>
                 <span class="link-name">Settings</span>
             </a>
@@ -78,7 +80,61 @@
             <a href="../html/faculty-attendance.html" class="link">Attendance</a>
         </nav>
 
+        <div class="card-container">
+            <div class="card">
+                <h1>Grades</h1>
+                <table id="faculty-grades-table-1" class="class-list-table">
+                    <thead>
+                        <tr>
+                            <th>Student ID</th>
+                            <th>Student Name</th>
+                            <th>Section</th>
+                            <th>Prelim</th>
+                            <th>Midterm</th>
+                            <th>Final</th>
+                            <th>GWA</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Add student data here -->
+                        <tr>
+                            <td>12223MN-000540</td>
+                            <td>Balaba, Claire Angeli J.</td>
+                            <td>BSAIS 2-1</td>
+                            <td><input type="text" name="prelim_grade" value="85" min="0" max="100" required></td>
+                            <td><input type="text" name="midterm_grade" value="90" min="0" max="100" required></td>
+                            <td><input type="text" name="final_grade" value="92" min="0" max="100" required></td>
+                            <td><b id="gwa">89.33</b></td>
+                        </tr>
+                        <tr>
+                            <td>AIS223</td>
+                            <td>Advance Airline Ticketing</td>
+                            <td>Caguia, Cielito M.</td>
+                            <td><input type="text" name="prelim_grade" value="80" min="0" max="100" required></td>
+                            <td><input type="text" name="midterm_grade" value="85" min="0" max="100" required></td>
+                            <td><input type="text" name="final_grade" value="90" min="0" max="100" required></td>
+                            <td><b id="gwa">85.00</b></td>
+                        </tr>
+                        <tr>
+                            <td>IS222</td>
+                            <td>System Analysis and Design</td>
+                            <td>Dasalla, Jerum B.</td>
+                            <td><input type="text" name="prelim_grade" value="86" min="0" max="100" required></td>
+                            <td><input type="text" name="midterm_grade" value="90" min="0" max="100" required></td>
+                            <td><input type="text" name="final_grade" value="94" min="0" max="100" required></td>
+                            <td><b id="gwa">90.00</b></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <button class="class-list-btn" onclick="location.href = '/patch 1.1/html/webdev.html'">
+                    Back to Dashboard
+                </button>
+            </div> 
+        </div>
     </main>
+    <script src="/profile/js/grades.js"></script>
+    <script src="/profile/js/classlist.js"></script>
     <script src="../js/navbar.js"></script>
 </body>
 </html>

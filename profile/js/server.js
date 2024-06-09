@@ -8,17 +8,11 @@ app.use(bodyParser.json());
 
 // Use the router middleware
 app.use('/', router);
-const admin = {
-    "username" : "admin",
-    "password" : "admin123",
-    "email" : "null",
-    "redirectUrl": "../html/admin-dashboard.html"
-  };
   const faculty = {
     "username" : "faculty",
     "password" : "test1",
     "email" : "testfaculty@gmail.com",
-    "redirectUrl": "../html/dashboard.html"
+    "redirectUrl": "/patch 1.1/html/faculty-dashboard.html"
   }
   const student = {
     "username" : "kurea",

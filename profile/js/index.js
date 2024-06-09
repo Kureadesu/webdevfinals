@@ -10,17 +10,11 @@ function login(event){
   event.preventDefault();
 
 // accounts
-const admin = {
-  "username" : "admin",
-  "password" : "admin123",
-  "email" : "null",
-  "redirectUrl": "../html/admin-dashboard.html"
-};
 const faculty = {
   "username" : "faculty",
   "password" : "test1",
   "email" : "testfaculty@gmail.com",
-  "redirectUrl": "../html/dashboard.html"
+  "redirectUrl": "/patch 1.1/html/faculty-dashboard.html"
 }
 const student = {
   "username" : "kurea",
@@ -55,7 +49,7 @@ form.addEventListener("submit", (event) => {
     return;
   } else {
     // Check if the username and password match any of the accounts
-    const accounts = [admin, faculty, student];
+    const accounts = [faculty, student];
     const matchedAccount = accounts.find((account) => {
       return account.username === username && account.password === password;
     });

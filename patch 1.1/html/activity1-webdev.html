@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../misc/all.min.css">
     <link rel="stylesheet" href="../misc/fontawesome.min.css">
     <link rel="stylesheet" href="../misc/fonts.css">
+    <link rel="shortcut icon" href="/patch 1.1/static/logo-transparent.png" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -19,6 +20,7 @@
         <div class="header-right">
             <i class="fa-solid fa-plus" style="font-size: 25px;"></i>
             <img src="../static/tristan.png" width="50" height="50" alt="pfp">
+            <a href="/profile/html/login.html" style="color: red; text-decoration: none;"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
         </div>
     </header>
 
@@ -70,7 +72,53 @@
     </aside>
     <!--main content-->
     <main>
-
+        <nav>
+            <a href="../html/activity1-webdev.html" class="link active-1">Instructions</a>
+            <a href="../html/webdev-classwork.html" class="link">Student Submissions</a>
+        </nav>
+        
+        <div class="main-container">
+            <br>
+            <div class="card">
+                <div class="base">
+                    <div class="left">
+                        <img src="../static/icons8-exam-40.png" alt="">
+                    </div>
+                    
+                    <div class="card-R">
+                        <div class="right">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <h1>Final Project Presentation</h1>
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </div>
+                            <span>Sheryl Ann B. Ricafort • May 21, 8:30 am</span>
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <div style="display: flex; flex-direction: column; color: gray; font-size: 15px; padding-top: 10px;">
+                                    <span>exam</span>
+                                    <span>100 points</span>
+                                </div>
+                                <span>due 10 June, 1:00 pm</span>
+                            </div>
+                        </div>
+                        <div style="padding-top: 10px; padding-bottom: 10px;">
+                            <span>description</span>
+                            <hr noshade color="lightgray">
+                            <div style="padding-top: 10px;">
+                                <i class="fa-solid fa-user-group"></i>
+                                <span>class comments</span>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <img src="../static/tristan.png" width="50" height="50" alt="pfp" style="border-radius: 50%; border: 1px solid gray;">
+                            <div class="input-box">
+                                <input type="text" placeholder="add comment..." id="comment" name="comment">
+                                <input type="submit" value="comment">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <script src="../js/navbar.js"></script>
 </body>

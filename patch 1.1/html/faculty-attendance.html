@@ -19,6 +19,7 @@
         <div class="header-right">
             <i class="fa-solid fa-plus" style="font-size: 25px;"></i>
             <img src="../static/tristan.png" width="50" height="50" alt="pfp">
+            <a href="/profile/html/login.html" style="color: red; text-decoration: none;"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
         </div>
     </header>
 
@@ -39,15 +40,15 @@
                 <span class="link-name toggle">Teaching</span>
             </a>
             <div id="toggle-group">
-                <a href="../html/faculty-resources.html" class="link visible active">
+                <a href="../html/faculty-resources.html" class="link visible">
                     <i class="fa-solid fa-book"></i>
                     <span class="link-name">Resources</span>
                 </a>
-                <a href="./faculty-submissions.htmls" class="link visible">
+                <a href="./faculty-submissions.html" class="link visible">
                     <i class="fa-solid fa-folder"></i>
                     <span class="link-name">Submissions</span>
                 </a>
-                <a href="../html/webdev.html" class="link visible">
+                <a href="../html/webdev.html" class="link visible active">
                     <!--<img width="24" height="24" src="#" alt="home"/>-->
                     <i class="fa-solid fa-circle"></i>
                     <div class="class-info">
@@ -78,8 +79,34 @@
             <a href="../html/faculty-attendance.html" class="link active-1">Attendance</a>
         </nav>
 
-
+        <div class="main-container">
+            <div class="studentData">
+                <form action="" id="form1">
+                  <input type="text" placeholder="Name" id="name" required>
+                  <!-- <input type="text" placeholder="Hour" id="hour" required>
+                  <input type="text" placeholder="Subject" id="subject" required> -->
+                  <input type="text" placeholder="Student Number" id="rollNo" required>
+                  <input type="submit" class="btn btn-warning">
+                </form>
+              </div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>id</th>
+                    <th>Name</th>
+                    <!-- <th>Hour</th>
+                    <th>Subject</th> -->
+                    <th>Student No.</th>
+                    <th>Attendence</th>
+                  </tr>
+                </thead>
+                <tbody id="tbody">
+            
+                </tbody>
+              </table>
+        </div>
     </main>
+    <script src="../js/attendance.js"></script>
     <script src="../js/navbar.js"></script>
 </body>
 </html>

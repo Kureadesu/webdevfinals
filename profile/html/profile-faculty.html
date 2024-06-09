@@ -4,29 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile | ActTrack</title>
-    <link rel="stylesheet" href="../css/profile.css">
-    <link rel="stylesheet" href="../misc/fonts.css">
-    <link rel="stylesheet" href="../misc/all.min.css">
-    <link rel="stylesheet" href="../misc/fontawesome.min.css">
+    <link rel="stylesheet" href="/profile/css/profile.css">
+    <link rel="stylesheet" href="/profile/misc/all.min.css">
+    <link rel="stylesheet" href="/profile/misc/fontawesome.min.css">
+    <link rel="stylesheet" href="/profile/misc/fonts.css">
 </head>
 <body>
+    <input type="checkbox" id="menuToggle" class="menu-toggle">
     <header>
-        <a href="../html/dashboard.html"><!--link to homepage / dashboard-->
-        <h1>ActTrack</h1></a>
-        <nav class="topnav"> 
-            <a href="#">Attendance</a>
-            <a href="#">Grades</a>
-            <a href="#" class="active">Profile</a>
-        </nav>
+        <div>
+            <label for="menuToggle" class="menu-button"><i class="fa-solid fa-bars"></i></label>
+            <a href="../html/dashboard-student.html"></a><h1>ActTrack</h1></a>
+        </div>
     </header>
-
-    <aside>
-        <h1>User Profile</h1>
-        <nav class="sidenav">
-            <a href="../html/dashboard.html">Dashboard</a>
+    <aside class="aside-menu">
+        <nav>
+            <ul>
+                <li><a href="../html/dashboard-student.html"><i class="fa-solid fa-house"></i>Dashboard</a></li>
+                <li><a href="../html/attendance-student.html"><i class="fa-solid fa-clipboard-user"></i>Attendance</a></li>
+                <li><a href="../html/grades.html"><i class="fa-solid fa-ranking-star"></i>Grades</a></li>
+                <li><a href="../html/profile.html" class="active"><i class="fa-solid fa-user"></i>Profile</a></li>
+            </ul>
         </nav>
-        <a href="../html/login.html">
-        <p class="logout">Log out</p></a>
+        <nav>
+            <ul>
+                <li><a href="/profile/html/login.html" style="color: red;"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </nav>
     </aside>
     <main>
         <div class="border">
