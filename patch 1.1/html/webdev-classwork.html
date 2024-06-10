@@ -80,36 +80,55 @@
                 </optgroup>
             </select>
 
-            <div class="topic-1">
-                <div class="topic-meta">
-                    <h2>Topic 1</h2>
-                    <i class="fa-solid fa-ellipsis-vertical"></i>
-                </div>
-                <br>
-                <div class="task" onclick="location.href='/patch 1.1/html/activity1-webdev.html'">
-                    <div class="task-info">
-                        <img src="../static/icons8-quiz-50.png" width="50" height="50" alt="q">
-                        <span class="task-name">Final project presentation</span>
-                    </div>
-                    <div class="task-meta">
-                        <span class="task-type">exam</span>
-                    </div>
-                    <div class="task-meta">
-                        <span class="deadline">due 10 Jun, 1:00 pm</span>
-                    </div>
-                    <div class="opt">
+            <div id="task-list">
+                <div class="topic-1">
+                    <div class="topic-meta">
+                        <h2>Topic 1</h2>
                         <i class="fa-solid fa-ellipsis-vertical"></i>
                     </div>
+                    <br>
+                    <div class="task" onclick="location.href='/patch 1.1/html/activity1-webdev.html'">
+                        <div class="task-info">
+                            <img src="../static/icons8-quiz-50.png" width="50" height="50" alt="q">
+                            <span class="task-name">Final project presentation</span>
+                        </div>
+                        <div class="task-meta">
+                            <span class="task-type">exam</span>
+                        </div>
+                        <div class="task-meta">
+                            <span class="deadline">due 10 Jun, 1:00 pm</span>
+                        </div>
+                        <div class="opt">
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                    </div>
+    
                 </div>
-
             </div>
+           
             <br>
-            <button class="btn-create">
+            <button class="btn-create" onclick="showCreateForm()">
                 <i class="fa-solid fa-plus"></i> Create
             </button>
+            <div id="create-task-form" style="display: none;">
+                <h3>Create New Task</h3>
+                <form id="task-form">
+                    <label for="task-name">Task Name:</label>
+                    <input type="text" id="task-name" required><br>
+                    <br>
+                    <label for="task-type">Task Type:</label>
+                    <input type="text" id="task-type" required><br>
+                    <br>
+                    <label for="task-deadline">Deadline:</label>
+                    <input type="datetime-local" id="task-deadline" required><br>
+                    <br>
+                    <button type="submit">Add Task</button>
+                </form>
+            </div>
         </div>
         
     </main>
+    <script src="../js/create_task.js"></script>
     <script src="../js/navbar.js"></script>
 </body>
 </html>
